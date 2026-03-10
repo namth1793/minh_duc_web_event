@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "brandStory": "Câu Chuyện",
+    "lifestyleEvents": "Sự Kiện Cá Nhân",
+    "businessEvents": "Sự Kiện Doanh Nghiệp",
+    "blog": "Tin Tức",
+    "careers": "Tuyển Dụng",
+    "contact": "Liên Hệ"
+  },
+  "hero": {
+    "tagline": "Nơi Thiên Nhiên Truyền Cảm Hứng Cho Những Kỷ Niệm Vĩnh Cửu",
+    "subtitle": "Không gian sự kiện phi thường nơi vẻ đẹp kiến trúc hòa quyện với thiên nhiên, tạo nên những khoảnh khắc không thể nào quên cho mọi dịp.",
+    "exploreEvents": "Khám Phá Sự Kiện",
+    "inquireNow": "Liên Hệ Ngay"
+  },
+  "about": {
+    "eyebrow": "Chào Mừng Đến Elevate Media",
+    "title": "Nơi Mỗi Chi Tiết Trở Thành Kỷ Niệm",
+    "p1": "Nằm giữa những khu vườn tươi tốt và kiến trúc vượt thời gian, Elevate Media là điểm đến sự kiện sang trọng được tôn vinh nhất Việt Nam. Hơn một thập kỷ qua, chúng tôi được tin tưởng giao phó những cột mốc quý giá nhất trong cuộc đời — từ những kỷ niệm thân mật đến những dạ tiệc doanh nghiệp hoành tráng.",
+    "p2": "Triết lý của chúng tôi rất đơn giản: không có hai sự kiện nào nên cảm thấy giống nhau. Mỗi lễ kỷ niệm mà chúng tôi tạo ra là một kiệt tác riêng biệt, được điều chỉnh để phản ánh tinh thần độc đáo của khách hàng.",
+    "discoverOurStory": "Khám Phá Câu Chuyện"
+  },
+  "lifestyle": {
+    "eyebrow": "Sự Kiện Cá Nhân",
+    "title": "Kỷ Niệm Những Khoảnh Khắc Đẹp Nhất Trong Cuộc Đời",
+    "subtitle": "Từ những kỷ niệm thân mật đến tiệc cưới hoành tráng, chúng tôi biến tầm nhìn của bạn thành hiện thực phi thường.",
+    "explore": "Khám Phá",
+    "wedding": {
+      "title": "Đám Cưới",
+      "desc": "Ngày trọng đại của bạn, được tạo ra với tình yêu và sự chú ý tỉ mỉ đến từng chi tiết."
+    },
+    "anniversary": {
+      "title": "Kỷ Niệm Ngày Cưới",
+      "desc": "Kỷ niệm hành trình tình yêu với một sự kiện ý nghĩa như câu chuyện của bạn."
+    },
+    "dinnerParty": {
+      "title": "Tiệc Tối",
+      "desc": "Những buổi gặp gỡ thân mật được nâng tầm với ẩm thực tinh tế và dịch vụ hoàn hảo."
+    },
+    "birthday": {
+      "title": "Tiệc Sinh Nhật",
+      "desc": "Đánh dấu một năm mới với buổi kỷ niệm độc đáo và sống động như bạn."
+    },
+    "privateCelebration": {
+      "title": "Tiệc Riêng Tư",
+      "desc": "Sự kiện đặc biệt cho những khoảnh khắc quan trọng trong cuộc sống, được tạo ra hoàn toàn cho bạn."
+    }
+  },
+  "business": {
+    "eyebrow": "Sự Kiện Doanh Nghiệp",
+    "title": "Nơi Kinh Doanh Gặp Gỡ Xuất Sắc",
+    "subtitle": "Nâng tầm sự kiện doanh nghiệp của bạn với không gian tinh tế, công nghệ tiên tiến và dịch vụ hiếu khách vô song.",
+    "galaDinner": {
+      "title": "Dạ Tiệc",
+      "desc": "Những buổi tối xa hoa truyền cảm hứng, tưởng thưởng và để lại ấn tượng lâu dài cho mọi khách."
+    },
+    "conference": {
+      "title": "Hội Nghị",
+      "desc": "Cơ sở vật chất hiện đại cho các cuộc họp chuyên nghiệp hiệu quả và có tác động."
+    },
+    "brandLaunch": {
+      "title": "Ra Mắt Thương Hiệu",
+      "desc": "Làm cho buổi ra mắt sản phẩm trở nên khó quên với sân khấu kịch tính và trải nghiệm đắm chìm."
+    },
+    "corporateEvents": {
+      "title": "Sự Kiện Doanh Nghiệp",
+      "desc": "Từ lễ kỷ niệm đội ngũ đến họp cổ đông, chúng tôi xử lý mọi chi tiết với độ chính xác cao."
+    },
+    "executiveMeeting": {
+      "title": "Họp Điều Hành",
+      "desc": "Không gian phòng họp riêng tư và dịch vụ tùy chỉnh cho những cuộc trò chuyện quan trọng nhất của bạn."
+    }
+  },
+  "philosophy": {
+    "eyebrow": "Triết Lý Của Chúng Tôi",
+    "quote": "Chúng tôi không chỉ đơn giản là tổ chức sự kiện. Chúng tôi sáng tác những trải nghiệm vang vọng mãi sau khi vị khách cuối cùng đã ra về.",
+    "author": "— Elevate Media, Người Sáng Lập"
+  },
+  "cta": {
+    "title": "Hãy Cùng Tạo Nên Điều Gì Đó Tuyệt Đẹp",
+    "subtitle": "Mọi sự kiện phi thường đều bắt đầu từ một cuộc trò chuyện. Hãy chia sẻ tầm nhìn của bạn, và chúng tôi sẽ biến nó thành hiện thực.",
+    "startPlanning": "Bắt Đầu Lên Kế Hoạch",
+    "viewVenues": "Xem Không Gian"
+  },
+  "contactInfo": {
+    "title": "Tìm Chúng Tôi",
+    "phone": {
+      "label": "Điện Thoại",
+      "value": "+84 236 123 4567"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@elevatemedia.vn"
+    },
+    "address": {
+      "label": "Địa Chỉ",
+      "value": "123 Trần Phú, Hải Châu, Đà Nẵng"
+    },
+    "hours": {
+      "label": "Giờ Hoạt Động",
+      "value": "T2–CN: 8:00 SA – 9:00 CH"
+    }
+  },
+  "footer": {
+    "tagline": "Nơi Thiên Nhiên Truyền Cảm Hứng Cho Những Kỷ Niệm Vĩnh Cửu",
+    "quickLinks": "Liên Kết Nhanh",
+    "connect": "Kết Nối Với Chúng Tôi",
+    "copyright": "© 2025 Elevate Media. Tất cả quyền được bảo lưu.",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "brandStory": {
+    "hero": {
+      "eyebrow": "Câu Chuyện Của Chúng Tôi",
+      "title": "Sinh Ra Từ Niềm Đam Mê Hoàn Hảo"
+    },
+    "vision": {
+      "eyebrow": "Tầm Nhìn Của Chúng Tôi",
+      "title": "Định Nghĩa Lại Sự Kiện Sang Trọng Tại Việt Nam",
+      "p1": "Elevate Media được thành lập với một tầm nhìn duy nhất: tạo ra một không gian nơi ranh giới giữa kiến trúc, thiên nhiên và lễ kỷ niệm của con người tan biến hoàn toàn. Từ khi mở cửa năm 2013, chúng tôi đã phát triển từ một không gian sự kiện nhỏ thành điểm đến sự kiện sang trọng được công nhận nhất Việt Nam.",
+      "p2": "Đội ngũ sáng lập của chúng tôi đã dành nhiều năm nghiên cứu những không gian sự kiện vĩ đại nhất thế giới — từ các phòng khách hoành tráng ở Paris đến các sân thượng vườn ở Tuscany — trước khi trở về Việt Nam để tạo ra điều gì đó độc đáo của riêng mình: sự tôn vinh văn hóa và cảnh quan Việt Nam, được nâng lên các tiêu chuẩn quốc tế cao nhất."
+    },
+    "architecture": {
+      "eyebrow": "Kiến Trúc & Thiết Kế",
+      "title": "Không Gian Được Thiết Kế Để Truyền Cảm Hứng",
+      "p1": "Mỗi inch của không gian của chúng tôi được thiết kế có chủ đích. Phòng khiêu vũ chính, với trần cao chót vót và cửa sổ từ sàn đến trần, tạo ra bầu không khí hoành tráng vẫn cảm thấy kết nối mật thiết với những khu vườn tươi tốt bên ngoài. Các mô típ Việt Nam được dệt xuyên suốt thiết kế — trong các tấm gỗ chạm khắc bằng tay, các tấm phủ tường bằng lụa, các tác phẩm nghệ thuật được đặt hàng riêng.",
+      "p2": "Chúng tôi đã làm việc với các kiến trúc sư và nhà thiết kế nội thất từng đoạt giải thưởng để tạo ra những không gian cảm thấy vừa vượt thời gian vừa rõ ràng hiện đại — những môi trường khiến mọi sự kiện cảm thấy như thể nó luôn được dự định xảy ra ở đây."
+    },
+    "hospitality": {
+      "eyebrow": "Lời Hứa Của Chúng Tôi",
+      "title": "Sự Hiếu Khách Như Một Nghệ Thuật",
+      "p1": "Tại Elevate Media, chúng tôi tin rằng sự hiếu khách không phải là một dịch vụ — đó là một nghệ thuật. Đội ngũ của chúng tôi trải qua đào tạo nghiêm ngặt để nắm vững nghệ thuật tinh tế của việc dự đoán nhu cầu trước khi chúng được bày tỏ, của việc khiến mỗi khách cảm thấy như người quan trọng nhất trong phòng.",
+      "p2": "Triết lý này mở rộng từ các thành viên trẻ nhất của đội ngũ đến các điều phối viên cấp cao nhất. Nó được nhúng vào văn hóa, hệ thống và cam kết không thể lay chuyển về sự xuất sắc của chúng tôi."
+    },
+    "emotional": {
+      "eyebrow": "Tạo Ra Kỷ Niệm",
+      "title": "Cảm Xúc Ở Trung Tâm Của Mọi Thứ",
+      "p1": "Đằng sau mỗi đám cưới chúng tôi tổ chức là một câu chuyện tình yêu. Đằng sau mỗi dạ tiệc doanh nghiệp là thành tích của một đội ngũ. Đằng sau mỗi buổi kỷ niệm sinh nhật là một cuộc sống được sống đẹp đẽ. Chúng tôi không bao giờ mất đi nhận thức về cảm xúc con người ở trung tâm của những gì chúng tôi làm.",
+      "p2": "Nhận thức này — rằng chúng tôi là người giữ gìn những khoảnh khắc quý giá nhất của mọi người — là điều thúc đẩy chúng tôi vượt qua mọi kỳ vọng tại mỗi sự kiện. Đó là lý do tại sao khách hàng của chúng tôi quay lại năm này qua năm khác, và tại sao họ tin tưởng chúng tôi với những lễ kỷ niệm quan trọng nhất của họ."
+    }
+  },
+  "lifestylePage": {
+    "hero": {
+      "eyebrow": "Sự Kiện Cá Nhân",
+      "title": "Tạo Nên Những Khoảnh Khắc Kéo Dài Mãi Mãi"
+    },
+    "inquiry": {
+      "title": "Lên Kế Hoạch Sự Kiện",
+      "subtitle": "Hãy chia sẻ tầm nhìn của bạn và chúng tôi sẽ tạo ra điều gì đó phi thường cùng nhau.",
+      "name": "Họ và Tên",
+      "email": "Địa Chỉ Email",
+      "phone": "Số Điện Thoại",
+      "eventDate": "Ngày Sự Kiện Ưa Thích",
+      "guests": "Số Lượng Khách",
+      "info": "Hãy cho chúng tôi biết về sự kiện của bạn",
+      "newsletter": "Tôi muốn nhận cập nhật và cảm hứng từ Elevate Media",
+      "submit": "Gửi Yêu Cầu",
+      "success": "Cảm ơn bạn! Yêu cầu của bạn đã được nhận. Đội ngũ của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+      "error": "Có lỗi xảy ra. Vui lòng thử lại."
+    }
+  },
+  "businessPage": {
+    "hero": {
+      "eyebrow": "Sự Kiện Doanh Nghiệp",
+      "title": "Nơi Xuất Sắc Gặp Gỡ Đổi Mới"
+    },
+    "capacity": {
+      "eyebrow": "Sức Chứa Không Gian",
+      "title": "Không Gian Cho Mọi Quy Mô",
+      "mainBallroom": "Phòng Khiêu Vũ Chính",
+      "mainBallroomDesc": "Tối đa 800 khách ngồi / 1.200 đứng",
+      "gardenPavilion": "Nhà Pavilion Vườn",
+      "gardenPavilionDesc": "Tối đa 200 khách ngồi / 350 đứng",
+      "conferenceSuite": "Suite Hội Nghị",
+      "conferenceSuiteDesc": "Tối đa 120 đại biểu, kiểu phòng họp hoặc nhà hát",
+      "privateDining": "Phòng Ăn Tối Riêng Tư",
+      "privateDiningDesc": "Tối đa 50 khách, thân mật và độc quyền"
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "eyebrow": "Nhật Ký",
+      "title": "Câu Chuyện, Hiểu Biết & Cảm Hứng"
+    },
+    "all": "Tất Cả",
+    "readMore": "Đọc Thêm",
+    "loading": "Đang tải câu chuyện...",
+    "error": "Không thể tải bài viết"
+  },
+  "blogDetail": {
+    "back": "Trở Về Nhật Ký",
+    "loading": "Đang tải bài viết...",
+    "error": "Không tìm thấy bài viết"
+  },
+  "careersPage": {
+    "hero": {
+      "eyebrow": "Gia Nhập Đội Ngũ",
+      "title": "Xây Dựng Sự Nghiệp Trong Khách Sạn Sang Trọng"
+    },
+    "culture": {
+      "eyebrow": "Cuộc Sống Tại Elevate Media",
+      "title": "Hơn Cả Một Nơi Làm Việc",
+      "p1": "Chúng tôi là một đội ngũ những cá nhân đầy nhiệt huyết tin tưởng vào sức mạnh biến đổi của những trải nghiệm phi thường. Văn hóa của chúng tôi được xây dựng trên sự tôn trọng lẫn nhau, học hỏi liên tục và sự theo đuổi xuất sắc chung.",
+      "p2": "Chúng tôi đầu tư vào con người của mình — thông qua các chương trình đào tạo đẳng cấp thế giới, cơ hội tiếp xúc quốc tế và môi trường làm việc truyền cảm hứng sáng tạo và tham vọng."
+    },
+    "positions": "Vị Trí Đang Tuyển",
+    "applyNow": "Ứng Tuyển Ngay",
+    "fullTime": "Toàn thời gian",
+    "modal": {
+      "title": "Ứng Tuyển Vị Trí",
+      "name": "Họ và Tên",
+      "email": "Địa Chỉ Email",
+      "phone": "Số Điện Thoại",
+      "message": "Thư Xin Việc / Tin Nhắn",
+      "submit": "Gửi Đơn Ứng Tuyển",
+      "cancel": "Hủy",
+      "success": "Đơn ứng tuyển của bạn đã được nhận. Chúng tôi sẽ xem xét và liên hệ lại.",
+      "error": "Có lỗi xảy ra. Vui lòng thử lại."
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Liên Hệ Chúng Tôi",
+      "title": "Bắt Đầu Hành Trình Sự Kiện Của Bạn"
+    },
+    "form": {
+      "title": "Gửi Tin Nhắn Cho Chúng Tôi",
+      "name": "Họ và Tên",
+      "email": "Địa Chỉ Email",
+      "phone": "Số Điện Thoại",
+      "message": "Tin Nhắn",
+      "eventDate": "Ngày Sự Kiện (nếu có)",
+      "attendees": "Số Lượng Người Tham Dự",
+      "submit": "Gửi Tin Nhắn",
+      "success": "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ liên lạc trong vòng 24 giờ.",
+      "error": "Có lỗi xảy ra. Vui lòng thử lại."
+    },
+    "info": {
+      "title": "Ghé Thăm Chúng Tôi",
+      "phone": "+84 236 123 4567",
+      "email": "info@elevatemedia.vn",
+      "address": "123 Đường Trần Phú\nQuận Hải Châu\nĐà Nẵng, Việt Nam",
+      "hours": "Thứ Hai – Chủ Nhật\n8:00 SA – 9:00 CH"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-dark antialiased;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8844A;
+}
+
+/* Selection */
+::selection {
+  background: #C9A96E;
+  color: white;
+}
+
+/* Prose styles for blog content */
+.prose-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E8D5B0;
+}
+
+.prose-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #4a4a4a;
+  margin-bottom: 1.25rem;
+}
+
+/* Gold divider line */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A96E, #A8844A);
+  margin: 0 auto;
+}
+
+.gold-divider-left {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A96E, #A8844A);
+}
+
+/* Elegant input styles */
+.luxury-input {
+  @apply w-full border border-gray-200 px-4 py-3 text-dark font-sans text-sm focus:outline-none focus:border-gold transition-colors duration-200 bg-white;
+}
+
+.luxury-textarea {
+  @apply w-full border border-gray-200 px-4 py-3 text-dark font-sans text-sm focus:outline-none focus:border-gold transition-colors duration-200 bg-white resize-none;
+}
+
+/* Button variants */
+.btn-primary {
+  @apply bg-dark text-white px-8 py-3 tracking-widest uppercase text-xs font-sans font-medium hover:bg-gold transition-all duration-300 inline-block;
+}
+
+.btn-secondary {
+  @apply border border-dark text-dark px-8 py-3 tracking-widest uppercase text-xs font-sans font-medium hover:bg-dark hover:text-white transition-all duration-300 inline-block;
+}
+
+.btn-gold {
+  @apply bg-gold text-white px-8 py-3 tracking-widest uppercase text-xs font-sans font-medium hover:bg-gold-dark transition-all duration-300 inline-block;
+}
+
+/* Image overlay animation */
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Navigation active state */
+.nav-link-active {
+  color: #C9A96E;
+}

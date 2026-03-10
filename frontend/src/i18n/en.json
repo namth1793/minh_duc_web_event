@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "home": "Home",
+    "brandStory": "Brand Story",
+    "lifestyleEvents": "Lifestyle Events",
+    "businessEvents": "Business Events",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Where Nature Inspires Timeless Celebrations",
+    "subtitle": "An extraordinary venue where architectural elegance meets natural beauty, crafting unforgettable moments for every occasion.",
+    "exploreEvents": "Explore Events",
+    "inquireNow": "Inquire Now"
+  },
+  "about": {
+    "eyebrow": "Welcome to Elevate Media",
+    "title": "A Place Where Every Detail Becomes a Memory",
+    "p1": "Nestled amidst lush gardens and timeless architecture, Elevate Media is Vietnam's most celebrated luxury event destination. For over a decade, we have been entrusted with life's most precious milestones — from intimate anniversaries to grand corporate galas.",
+    "p2": "Our philosophy is simple: no two events should ever feel the same. Every celebration we craft is a bespoke masterpiece, tailored to reflect the unique spirit of our clients.",
+    "discoverOurStory": "Discover Our Story"
+  },
+  "lifestyle": {
+    "eyebrow": "Lifestyle Events",
+    "title": "Celebrate Life's Most Beautiful Moments",
+    "subtitle": "From intimate anniversaries to grand wedding receptions, we transform your vision into an extraordinary reality.",
+    "explore": "Explore",
+    "wedding": {
+      "title": "Wedding",
+      "desc": "Your perfect day, crafted with love and meticulous attention to every detail."
+    },
+    "anniversary": {
+      "title": "Anniversary",
+      "desc": "Celebrate the journey of love with an event as meaningful as your story."
+    },
+    "dinnerParty": {
+      "title": "Dinner Party",
+      "desc": "Intimate gatherings elevated with exquisite cuisine and impeccable service."
+    },
+    "birthday": {
+      "title": "Birthday Celebration",
+      "desc": "Mark another year with a celebration as unique and vibrant as you are."
+    },
+    "privateCelebration": {
+      "title": "Private Celebration",
+      "desc": "Bespoke events for life's special moments, crafted entirely around you."
+    }
+  },
+  "business": {
+    "eyebrow": "Business Events",
+    "title": "Where Business Meets Brilliance",
+    "subtitle": "Elevate your corporate events with a venue that combines sophisticated spaces, cutting-edge technology, and unparalleled hospitality.",
+    "galaDinner": {
+      "title": "Gala Dinner",
+      "desc": "Opulent evenings that inspire, reward, and leave lasting impressions on every guest."
+    },
+    "conference": {
+      "title": "Conference",
+      "desc": "State-of-the-art facilities for productive, impactful professional gatherings."
+    },
+    "brandLaunch": {
+      "title": "Brand Launch",
+      "desc": "Make your product debut unforgettable with theatrical staging and immersive experiences."
+    },
+    "corporateEvents": {
+      "title": "Corporate Events",
+      "desc": "From team celebrations to shareholder meetings, we handle every detail with precision."
+    },
+    "executiveMeeting": {
+      "title": "Executive Meeting",
+      "desc": "Private boardroom settings and tailored services for your most important conversations."
+    }
+  },
+  "philosophy": {
+    "eyebrow": "Our Philosophy",
+    "quote": "We do not merely organize events. We compose experiences that resonate long after the last guest has departed.",
+    "author": "— Elevate Media, Founder"
+  },
+  "cta": {
+    "title": "Let's Design Something Beautiful Together",
+    "subtitle": "Every extraordinary event begins with a single conversation. Tell us your vision, and we will bring it to life.",
+    "startPlanning": "Start Planning",
+    "viewVenues": "View Venues"
+  },
+  "contactInfo": {
+    "title": "Find Us",
+    "phone": {
+      "label": "Phone",
+      "value": "+84 236 123 4567"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@elevatemedia.vn"
+    },
+    "address": {
+      "label": "Address",
+      "value": "123 Trần Phú, Hải Châu, Đà Nẵng"
+    },
+    "hours": {
+      "label": "Hours",
+      "value": "Mon–Sun: 8:00 AM – 9:00 PM"
+    }
+  },
+  "footer": {
+    "tagline": "Where Nature Inspires Timeless Celebrations",
+    "quickLinks": "Quick Links",
+    "connect": "Connect With Us",
+    "copyright": "© 2025 Elevate Media. All rights reserved.",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "brandStory": {
+    "hero": {
+      "eyebrow": "Our Story",
+      "title": "Born from a Passion for Perfection"
+    },
+    "vision": {
+      "eyebrow": "Our Vision",
+      "title": "Redefining Luxury Events in Vietnam",
+      "p1": "Elevate Media was founded with a singular vision: to create a venue where the boundaries between architecture, nature, and human celebration dissolve entirely. Since opening our doors in 2013, we have grown from a boutique event space into Vietnam's most acclaimed luxury event destination.",
+      "p2": "Our founders spent years studying the world's greatest event venues — from the grand salons of Paris to the garden terraces of Tuscany — before returning to Vietnam to create something uniquely our own: a celebration of Vietnamese culture and landscape, elevated to the highest international standards."
+    },
+    "architecture": {
+      "eyebrow": "Architecture & Design",
+      "title": "Spaces Designed to Inspire",
+      "p1": "Every inch of our venue has been designed with intention. The main ballroom, with its soaring ceilings and floor-to-ceiling windows, creates an atmosphere of grandeur that still feels intimately connected to the lush gardens beyond. Vietnamese motifs are woven throughout the design — in the hand-carved wooden panels, the silk wall coverings, the custom-commissioned artworks.",
+      "p2": "We worked with award-winning architects and interior designers to create spaces that feel both timeless and unmistakably contemporary — environments that make every event feel like it was always meant to happen here."
+    },
+    "hospitality": {
+      "eyebrow": "Our Promise",
+      "title": "Hospitality as an Art Form",
+      "p1": "At Elevate Media, we believe hospitality is not a service — it is an art form. Our team undergoes rigorous training to master the subtle craft of anticipating needs before they are expressed, of making every guest feel like the most important person in the room.",
+      "p2": "This philosophy extends from our most junior team members to our most senior coordinators. It is embedded in our culture, our systems, and our unwavering commitment to excellence."
+    },
+    "emotional": {
+      "eyebrow": "Creating Memories",
+      "title": "The Emotion at the Heart of Everything",
+      "p1": "Behind every wedding we host, there is a love story. Behind every corporate gala, there is a team's achievement. Behind every birthday celebration, there is a life beautifully lived. We never lose sight of the human emotion at the heart of what we do.",
+      "p2": "This awareness — that we are custodians of people's most precious moments — is what drives us to exceed expectations at every event. It is why our clients return year after year, and why they trust us with their most significant celebrations."
+    }
+  },
+  "lifestylePage": {
+    "hero": {
+      "eyebrow": "Lifestyle Events",
+      "title": "Crafting Moments That Last Forever"
+    },
+    "inquiry": {
+      "title": "Plan Your Event",
+      "subtitle": "Tell us about your vision and we'll create something extraordinary together.",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "eventDate": "Preferred Event Date",
+      "guests": "Number of Guests",
+      "info": "Tell us about your event",
+      "newsletter": "I'd like to receive updates and inspiration from Elevate Media",
+      "submit": "Send Inquiry",
+      "success": "Thank you! Your inquiry has been received. Our team will contact you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "businessPage": {
+    "hero": {
+      "eyebrow": "Business Events",
+      "title": "Where Excellence Meets Innovation"
+    },
+    "capacity": {
+      "eyebrow": "Venue Capacity",
+      "title": "Spaces for Every Scale",
+      "mainBallroom": "Main Ballroom",
+      "mainBallroomDesc": "Up to 800 guests seated / 1,200 standing",
+      "gardenPavilion": "Garden Pavilion",
+      "gardenPavilionDesc": "Up to 200 guests seated / 350 standing",
+      "conferenceSuite": "Conference Suite",
+      "conferenceSuiteDesc": "Up to 120 delegates, boardroom or theatre style",
+      "privateDining": "Private Dining Room",
+      "privateDiningDesc": "Up to 50 guests, intimate and exclusive"
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "eyebrow": "Journal",
+      "title": "Stories, Insights & Inspirations"
+    },
+    "all": "All",
+    "readMore": "Read More",
+    "loading": "Loading stories...",
+    "error": "Failed to load articles"
+  },
+  "blogDetail": {
+    "back": "Back to Journal",
+    "loading": "Loading article...",
+    "error": "Article not found"
+  },
+  "careersPage": {
+    "hero": {
+      "eyebrow": "Join Our Team",
+      "title": "Build Your Career in Luxury Hospitality"
+    },
+    "culture": {
+      "eyebrow": "Life at Elevate Media",
+      "title": "More Than a Workplace",
+      "p1": "We are a team of passionate individuals who believe in the transformative power of extraordinary experiences. Our culture is built on mutual respect, continuous learning, and the shared pursuit of excellence.",
+      "p2": "We invest in our people — through world-class training programs, international exposure opportunities, and a working environment that inspires creativity and ambition."
+    },
+    "positions": "Open Positions",
+    "applyNow": "Apply Now",
+    "fullTime": "Full-time",
+    "modal": {
+      "title": "Apply for Position",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Cover Letter / Message",
+      "submit": "Submit Application",
+      "cancel": "Cancel",
+      "success": "Your application has been received. We will review it and be in touch.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact Us",
+      "title": "Begin Your Event Journey"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "eventDate": "Event Date (if applicable)",
+      "attendees": "Number of Attendees",
+      "submit": "Send Message",
+      "success": "Thank you for reaching out. We will be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Visit Us",
+      "phone": "+84 236 123 4567",
+      "email": "info@elevatemedia.vn",
+      "address": "123 Trần Phú Street\nHải Châu District\nĐà Nẵng, Vietnam",
+      "hours": "Monday – Sunday\n8:00 AM – 9:00 PM"
+    }
+  }
+}
