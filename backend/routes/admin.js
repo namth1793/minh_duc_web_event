@@ -3,26 +3,21 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
+const { v2: cloudinary } = require('cloudinary');
+const streamifier = require('stream').Readable;
 const db = require('../db');
 const { requireAdmin, JWT_SECRET } = require('../middleware/auth');
 
-// ─── MULTER SETUP ──────────────────────────────────────────────────────────────
-const uploadsDir = path.join(__dirname, '../uploads');
-if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, uploadsDir),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname).toLowerCase();
-    const name = Date.now() + '-' + Math.round(Math.random() * 1e9) + ext;
-    cb(null, name);
-  },
+// ─── CLOUDINARY SETUP ─────────────────────────────────────────────────────────
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// ─── MULTER (memory storage) ───────────────────────────────────────────────────
 const upload = multer({
-  storage,
+  storage: multer.memoryStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
   fileFilter: (req, file, cb) => {
     if (file.mimetype.startsWith('image/')) cb(null, true);
@@ -30,10 +25,41 @@ const upload = multer({
   },
 });
 
-// POST /api/admin/upload — upload image file, returns { url }
-router.post('/upload', requireAdmin, upload.single('image'), (req, res) => {
+// Upload buffer to Cloudinary via stream
+function uploadToCloudinary(buffer, folder) {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      { folder: folder || 'minh-duc-events', resource_type: 'image' },
+      (error, result) => {
+        if (error) reject(error);
+        else resolve(result);
+      }
+    );
+    const readable = new streamifier();
+    readable.push(buffer);
+    readable.push(null);
+    readable.pipe(stream);
+  });
+}
+
+// Extract Cloudinary public_id from URL
+function extractPublicId(url) {
+  if (!url || !url.includes('cloudinary.com')) return null;
+  // URL format: .../upload/v123456/folder/filename.ext
+  const match = url.match(/\/upload\/(?:v\d+\/)?(.+)\.[^.]+$/);
+  return match ? match[1] : null;
+}
+
+// POST /api/admin/upload — upload image to Cloudinary, returns { url }
+router.post('/upload', requireAdmin, upload.single('image'), async (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'Không có file được tải lên' });
-  res.json({ url: `/uploads/${req.file.filename}` });
+  try {
+    const result = await uploadToCloudinary(req.file.buffer, 'minh-duc-events');
+    res.json({ url: result.secure_url });
+  } catch (err) {
+    console.error('Cloudinary upload error:', err);
+    res.status(500).json({ error: 'Upload ảnh thất bại' });
+  }
 });
 
 // ─── AUTH ─────────────────────────────────────────────────────────────────────
@@ -116,10 +142,18 @@ router.put('/blog/:id', requireAdmin, (req, res) => {
 });
 
 // DELETE /api/admin/blog/:id
-router.delete('/blog/:id', requireAdmin, (req, res) => {
+router.delete('/blog/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
-  const existing = db.prepare('SELECT id FROM blog_posts WHERE id = ?').get(id);
+  const existing = db.prepare('SELECT * FROM blog_posts WHERE id = ?').get(id);
   if (!existing) return res.status(404).json({ error: 'Post not found' });
+
+  // Delete thumbnail from Cloudinary if applicable
+  if (existing.thumbnail) {
+    const publicId = extractPublicId(existing.thumbnail);
+    if (publicId) {
+      try { await cloudinary.uploader.destroy(publicId); } catch (_) {}
+    }
+  }
 
   db.prepare('DELETE FROM blog_posts WHERE id = ?').run(id);
   res.json({ success: true });
@@ -275,15 +309,17 @@ router.put('/images/:id', requireAdmin, (req, res) => {
 });
 
 // DELETE /api/admin/images/:id
-router.delete('/images/:id', requireAdmin, (req, res) => {
+router.delete('/images/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
   const existing = db.prepare('SELECT * FROM site_images WHERE id = ?').get(id);
   if (!existing) return res.status(404).json({ error: 'Image not found' });
 
-  // Delete physical file if it's a local upload
-  if (existing.url && existing.url.startsWith('/uploads/')) {
-    const filePath = path.join(__dirname, '..', existing.url);
-    if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+  // Delete from Cloudinary if applicable
+  if (existing.url) {
+    const publicId = extractPublicId(existing.url);
+    if (publicId) {
+      try { await cloudinary.uploader.destroy(publicId); } catch (_) {}
+    }
   }
 
   db.prepare('DELETE FROM site_images WHERE id = ?').run(id);

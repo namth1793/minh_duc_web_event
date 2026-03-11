@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import api from '../../../lib/api';
 import { useAdmin } from '../../../context/AdminContext';
+import ImageUpload from '../../../components/ImageUpload';
 
 const CATEGORIES = ['Events', 'Corporate Events', 'News', 'Venue Space', 'Year End Party'];
 
@@ -106,15 +107,12 @@ function FormModal({ post, onSave, onCancel, loading }) {
 
           {/* Thumbnail */}
           <div style={{ marginTop: 16 }}>
-            <label style={labelStyle}>URL ảnh đại diện</label>
-            <input style={inputStyle} value={form.thumbnail} placeholder="https://..."
-              onChange={e => set('thumbnail', e.target.value)} required />
-            {form.thumbnail && (
-              <img src={form.thumbnail} alt="preview"
-                style={{ marginTop: 8, height: 100, width: 'auto', borderRadius: 4, objectFit: 'cover' }}
-                onError={e => (e.target.style.display = 'none')}
-              />
-            )}
+            <ImageUpload
+              label="Ảnh đại diện"
+              value={form.thumbnail}
+              onChange={url => set('thumbnail', url)}
+              required
+            />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 16 }}>

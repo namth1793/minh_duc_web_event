@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import api from '../../../lib/api';
 import { useAdmin } from '../../../context/AdminContext';
+import ImageUpload from '../../../components/ImageUpload';
 
 const PAGES = [
   { key: 'home', label: 'Trang Chủ', sections: ['hero', 'about', 'lifestyle', 'business', 'philosophy', 'gallery'] },
@@ -104,20 +105,13 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
           </div>
 
           <div style={{ marginTop: 16 }}>
-            <label style={labelStyle}>URL hình ảnh</label>
-            <input style={inputStyle} value={form.url} placeholder="https://images.unsplash.com/..."
-              onChange={e => set('url', e.target.value)} required />
+            <ImageUpload
+              label="Hình ảnh"
+              value={form.url}
+              onChange={url => set('url', url)}
+              required
+            />
           </div>
-
-          {form.url && (
-            <div style={{ marginTop: 12 }}>
-              <label style={{ ...labelStyle, marginBottom: 6 }}>Xem trước</label>
-              <img src={form.url} alt="preview"
-                style={{ width: '100%', height: 160, objectFit: 'cover', borderRadius: 4 }}
-                onError={e => { e.target.style.display = 'none'; }}
-              />
-            </div>
-          )}
 
           <div style={{
             marginTop: 24, display: 'flex', gap: 10, justifyContent: 'flex-end',
@@ -212,19 +206,13 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
           </div>
 
           <div style={{ marginTop: 16 }}>
-            <label style={labelStyle}>URL hình ảnh</label>
-            <input style={inputStyle} value={form.url}
-              onChange={e => set('url', e.target.value)} required />
+            <ImageUpload
+              label="Hình ảnh"
+              value={form.url}
+              onChange={url => set('url', url)}
+              required
+            />
           </div>
-
-          {form.url && (
-            <div style={{ marginTop: 12 }}>
-              <img src={form.url} alt="preview"
-                style={{ width: '100%', height: 160, objectFit: 'cover', borderRadius: 4 }}
-                onError={e => { e.target.style.display = 'none'; }}
-              />
-            </div>
-          )}
 
           <div style={{
             marginTop: 24, display: 'flex', gap: 10, justifyContent: 'flex-end',
