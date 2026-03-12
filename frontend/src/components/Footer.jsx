@@ -9,9 +9,10 @@ export default function Footer() {
 
   const navLinks = [
     { to: '/', label: t('nav.home') },
-    { to: '/brand-story', label: t('nav.brandStory') },
-    { to: '/lifestyle-events', label: t('nav.lifestyleEvents') },
-    { to: '/business-events', label: t('nav.businessEvents') },
+    { to: '/#about', label: t('nav.aboutUs') },
+    { to: '/#services', label: t('nav.ourServices') },
+    { to: '/#process', label: t('nav.workingProcess') },
+    { to: '/#why-us', label: t('nav.whyChooseUs') },
     { to: '/blog', label: t('nav.blog') },
     { to: '/careers', label: t('nav.careers') },
     { to: '/contact', label: t('nav.contact') },

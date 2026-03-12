@@ -3,7 +3,7 @@ import api from '../../../lib/api';
 import { useAdmin } from '../../../context/AdminContext';
 import ImageUpload from '../../../components/ImageUpload';
 
-const CATEGORIES = ['Events', 'Corporate Events', 'News', 'Venue Space', 'Year End Party'];
+const CATEGORIES = ['Sự Kiện', 'Booth & Triển Lãm', 'Livestream', 'Truyền Thông', 'Tin Tức'];
 
 const EMPTY_FORM = {
   title_en: '', title_vi: '', category: 'Events', date: '',

@@ -39,10 +39,10 @@ app.use('/api', contactRoutes);
 app.use('/api/admin', adminRoutes);
 
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Minh Duc Events API running' });
+  res.json({ status: 'ok', message: 'Elevate Media API running' });
 });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Minh Duc Events API running on http://localhost:${PORT}`);
+  console.log(`Elevate Media API running on http://localhost:${PORT}`);
 });

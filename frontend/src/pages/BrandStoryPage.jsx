@@ -100,10 +100,10 @@ export default function BrandStoryPage() {
             variants={stagger}
           >
             {[
-              { number: '500+', label: 'Events Hosted' },
-              { number: '12', label: 'Years of Excellence' },
-              { number: '50+', label: 'Expert Team Members' },
-              { number: '98%', label: 'Client Satisfaction' },
+              { number: '200+', label: 'Dự Án Hoàn Thành' },
+              { number: '100+', label: 'Khách Hàng Tin Tưởng' },
+              { number: '5+', label: 'Năm Kinh Nghiệm' },
+              { number: '98%', label: 'Khách Hàng Hài Lòng' },
             ].map((stat, i) => (
               <motion.div key={i} variants={fadeUp}>
                 <div className="font-serif text-5xl text-gold mb-2">{stat.number}</div>
@@ -185,8 +185,8 @@ export default function BrandStoryPage() {
       {/* Full-width image break */}
       <div className="relative h-72 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80"
-          alt="Dining at Minh Duc Events"
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
+          alt="Elevate Media events"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-dark/40" />
@@ -217,7 +217,7 @@ export default function BrandStoryPage() {
               </motion.p>
               <motion.div variants={fadeUp} className="mt-10">
                 <Link to="/contact" className="btn-primary">
-                  Start Your Journey
+                  Bắt Đầu Hợp Tác
                 </Link>
               </motion.div>
             </motion.div>

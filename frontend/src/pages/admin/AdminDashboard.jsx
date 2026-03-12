@@ -5,17 +5,15 @@ import logo from '../../assets/logo.jpg';
 import Overview from './sections/Overview';
 import BlogManager from './sections/BlogManager';
 import CareersManager from './sections/CareersManager';
-import ContentManager from './sections/ContentManager';
-import ImagesManager from './sections/ImagesManager';
-import SubmissionsViewer from './sections/SubmissionsViewer';
+import ServicesManager from './sections/ServicesManager';
+import ContactManager from './sections/ContactManager';
 
 const NAV_ITEMS = [
   { key: 'overview', label: 'Tổng Quan', icon: '▣' },
-  { key: 'blog', label: 'Bài Viết', icon: '✍' },
+  { key: 'services', label: 'Dịch Vụ', icon: '🎯' },
+  { key: 'blog', label: 'Blog', icon: '✍' },
   { key: 'careers', label: 'Tuyển Dụng', icon: '💼' },
-  { key: 'content', label: 'Nội Dung Trang', icon: '📝' },
-  { key: 'images', label: 'Hình Ảnh Trang', icon: '🖼' },
-  { key: 'submissions', label: 'Yêu Cầu Nhận Được', icon: '📬' },
+  { key: 'contact', label: 'Liên Hệ', icon: '📬' },
 ];
 
 export default function AdminDashboard() {
@@ -30,13 +28,18 @@ export default function AdminDashboard() {
 
   function renderSection() {
     switch (active) {
-      case 'overview': return <Overview />;
-      case 'blog': return <BlogManager />;
-      case 'careers': return <CareersManager />;
-      case 'content': return <ContentManager />;
-      case 'images': return <ImagesManager />;
-      case 'submissions': return <SubmissionsViewer />;
-      default: return <Overview />;
+      case 'overview':
+        return <Overview />;
+      case 'services':
+        return <ServicesManager />;
+      case 'blog':
+        return <BlogManager />;
+      case 'careers':
+        return <CareersManager />;
+      case 'contact':
+        return <ContactManager />;
+      default:
+        return <Overview />;
     }
   }
 

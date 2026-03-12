@@ -9,6 +9,7 @@ import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import AdminLoginPage from './pages/admin/AdminLoginPage';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import { useAdmin } from './context/AdminContext';
@@ -47,6 +48,7 @@ export default function App() {
                 <Route path="/business-events" element={<BusinessEventsPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:id" element={<BlogDetailPage />} />
+                <Route path="/services/:slug" element={<ServiceDetailPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>

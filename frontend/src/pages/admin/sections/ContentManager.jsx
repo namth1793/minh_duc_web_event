@@ -3,13 +3,17 @@ import api from '../../../lib/api';
 import { useAdmin } from '../../../context/AdminContext';
 
 const PAGES = [
-  { key: 'home', label: 'Trang Chủ', sections: ['hero', 'about', 'lifestyle', 'business', 'philosophy', 'cta'] },
+  { key: 'home', label: 'Trang Chủ', sections: ['hero', 'about', 'services', 'process', 'why-us', 'mission', 'cta'] },
   { key: 'brand-story', label: 'Câu Chuyện', sections: ['hero', 'vision', 'architecture', 'hospitality', 'emotional'] },
-  { key: 'lifestyle-events', label: 'Sự Kiện Cá Nhân', sections: ['hero', 'events', 'inquiry'] },
-  { key: 'business-events', label: 'Sự Kiện DN', sections: ['hero', 'events', 'capacity'] },
+  { key: 'lifestyle-events', label: 'Sự Kiện', sections: ['hero', 'events', 'inquiry'] },
+  { key: 'business-events', label: 'Booth & Livestream', sections: ['hero', 'services', 'capacity', 'cta'] },
   { key: 'blog', label: 'Blog', sections: ['hero'] },
-  { key: 'careers', label: 'Tuyển Dụng', sections: ['hero', 'culture'] },
+  { key: 'careers', label: 'Tuyển Dụng', sections: ['hero', 'culture', 'open-application'] },
   { key: 'contact', label: 'Liên Hệ', sections: ['hero', 'form', 'info'] },
+  { key: 'service-event', label: 'DV: Sự Kiện', sections: ['hero', 'description', 'features', 'cta'] },
+  { key: 'service-booth', label: 'DV: Booth', sections: ['hero', 'description', 'features', 'cta'] },
+  { key: 'service-livestream', label: 'DV: Livestream', sections: ['hero', 'description', 'features', 'cta'] },
+  { key: 'service-creative', label: 'DV: Creative', sections: ['hero', 'description', 'features', 'cta'] },
 ];
 
 function Toast({ message, type, onClose }) {

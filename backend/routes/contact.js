@@ -59,4 +59,27 @@ router.post('/career-apply', (req, res) => {
   }
 });
 
+// GET /api/content/:page — public endpoint, returns site_content overrides
+router.get('/content/:page', (req, res) => {
+  try {
+    const rows = db.prepare(
+      'SELECT section, content_en, content_vi FROM site_content WHERE page = ?'
+    ).all(req.params.page);
+    const result = {};
+    for (const row of rows) {
+      try {
+        result[row.section] = {
+          en: row.content_en ? JSON.parse(row.content_en) : null,
+          vi: row.content_vi ? JSON.parse(row.content_vi) : null,
+        };
+      } catch {
+        result[row.section] = { en: row.content_en, vi: row.content_vi };
+      }
+    }
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch content' });
+  }
+});
+
 module.exports = router;

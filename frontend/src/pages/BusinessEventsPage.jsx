@@ -13,40 +13,40 @@ const stagger = {
 
 const businessEventDetails = [
   {
-    key: 'conference',
-    img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&q=80',
-    capacity: 'Up to 120 delegates',
-    features: ['State-of-the-art AV system', 'High-speed WiFi', 'Breakout rooms', 'Professional lighting'],
-  },
-  {
-    key: 'brandLaunch',
+    key: 'boothExhibition',
     img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
-    capacity: 'Up to 500 guests',
-    features: ['Theatrical staging', 'LED walls', 'Custom set design', 'Media coordination'],
+    capacity: 'Booth Triển Lãm',
+    features: ['Thiết kế 3D theo concept', 'Thi công đúng tiến độ', 'Vật liệu cao cấp', 'Lắp dựng & tháo dỡ'],
   },
   {
-    key: 'galaDinner',
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80',
-    capacity: 'Up to 800 guests',
-    features: ['Fine dining service', 'Live entertainment', 'Awards ceremonies', 'Custom theming'],
+    key: 'activationBooth',
+    img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80',
+    capacity: 'Activation Booth',
+    features: ['Interactive experience', 'Branded props & décor', 'Photo zone setup', 'On-site staff support'],
   },
   {
-    key: 'corporateEvents',
-    img: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80',
-    capacity: 'Flexible layouts',
-    features: ['Team building areas', 'Networking spaces', 'Catering flexibility', 'Dedicated coordinator'],
+    key: 'stagingProduction',
+    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80',
+    capacity: 'Event Production',
+    features: ['Sân khấu chuyên nghiệp', 'Backdrop in ấn sắc nét', 'POSM đa dạng', 'Trang trí concept riêng'],
   },
   {
-    key: 'executiveMeeting',
-    img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80',
-    capacity: 'Up to 50 attendees',
-    features: ['Private boardroom', 'Secure WiFi', 'Concierge service', 'Bespoke catering'],
+    key: 'livestreamStudio',
+    img: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80',
+    capacity: 'Livestream Studio',
+    features: ['Setup thiết bị hiện đại', 'Ánh sáng chuyên nghiệp', 'Âm thanh chất lượng cao', 'Kết nối đa nền tảng'],
   },
   {
-    key: 'fashionShow',
-    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
-    capacity: 'Up to 300 guests',
-    features: ['Custom runway setup', 'Professional lighting rigs', 'Backstage facilities', 'Media backdrop'],
+    key: 'salesLivestream',
+    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
+    capacity: 'Sales Production',
+    features: ['Kịch bản bán hàng', 'Host chuyên nghiệp', 'Vận hành livestream', 'Tối ưu chốt đơn'],
+  },
+  {
+    key: 'creativeSupport',
+    img: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80',
+    capacity: 'Creative & Media',
+    features: ['Chiến lược truyền thông', 'Nội dung Social Media', 'Sản xuất video ngắn', 'Triển khai chiến dịch'],
   },
 ];
 
@@ -55,24 +55,24 @@ export default function BusinessEventsPage() {
 
   const getDesc = (key) => {
     const map = {
-      conference: t('business.conference.desc'),
-      brandLaunch: t('business.brandLaunch.desc'),
-      galaDinner: t('business.galaDinner.desc'),
-      corporateEvents: t('business.corporateEvents.desc'),
-      executiveMeeting: t('business.executiveMeeting.desc'),
-      fashionShow: 'A dramatic runway experience showcasing the finest fashion in an architectural masterpiece.',
+      boothExhibition: t('business.boothExhibition.desc'),
+      activationBooth: t('business.activationBooth.desc'),
+      stagingProduction: t('business.stagingProduction.desc'),
+      livestreamStudio: t('business.livestreamStudio.desc'),
+      salesLivestream: t('business.salesLivestream.desc'),
+      creativeSupport: t('business.creativeSupport.desc'),
     };
     return map[key] || '';
   };
 
   const getTitle = (key) => {
     const map = {
-      conference: t('business.conference.title') || 'Conference',
-      brandLaunch: t('business.brandLaunch.title') || 'Brand Launch',
-      galaDinner: t('business.galaDinner.title') || 'Gala Dinner',
-      corporateEvents: t('business.corporateEvents.title') || 'Corporate Events',
-      executiveMeeting: t('business.executiveMeeting.title') || 'Executive Meeting',
-      fashionShow: 'Fashion Show & Exhibition',
+      boothExhibition: t('business.boothExhibition.title'),
+      activationBooth: t('business.activationBooth.title'),
+      stagingProduction: t('business.stagingProduction.title'),
+      livestreamStudio: t('business.livestreamStudio.title'),
+      salesLivestream: t('business.salesLivestream.title'),
+      creativeSupport: t('business.creativeSupport.title'),
     };
     return map[key] || key;
   };
@@ -254,10 +254,10 @@ export default function BusinessEventsPage() {
             variants={stagger}
           >
             <motion.p variants={fadeUp} className="font-sans text-xs tracking-widest uppercase text-gold mb-4">
-              Our Capabilities
+              Năng Lực Thực Thi
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-serif text-4xl text-dark font-light mb-4">
-              Everything You Need to Succeed
+              Đội Ngũ & Thiết Bị Chuyên Nghiệp
             </motion.h2>
             <motion.div variants={fadeUp} className="gold-divider" />
           </motion.div>
@@ -270,12 +270,12 @@ export default function BusinessEventsPage() {
             variants={stagger}
           >
             {[
-              { icon: '📡', label: 'High-Speed WiFi' },
-              { icon: '🎬', label: 'Pro AV Systems' },
-              { icon: '🌐', label: 'Live Streaming' },
-              { icon: '🍽️', label: 'Bespoke Catering' },
-              { icon: '🚗', label: 'Valet Parking' },
-              { icon: '🎤', label: 'Sound Engineering' },
+              { icon: '🎪', label: 'Thi Công Booth' },
+              { icon: '🎬', label: 'Thiết Bị AV' },
+              { icon: '📱', label: 'Livestream Studio' },
+              { icon: '🎯', label: 'Chiến Lược Truyền Thông' },
+              { icon: '🎤', label: 'Host Chuyên Nghiệp' },
+              { icon: '📊', label: 'Báo Cáo Hiệu Quả' },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -300,17 +300,17 @@ export default function BusinessEventsPage() {
             variants={stagger}
           >
             <motion.h2 variants={fadeUp} className="font-serif text-4xl text-dark font-light mb-6">
-              Ready to Plan Your Business Event?
+              Sẵn Sàng Triển Khai Dự Án?
             </motion.h2>
             <motion.p variants={fadeUp} className="font-sans text-gray-500 mb-10 leading-relaxed">
-              Our corporate events team is standing by to discuss your requirements and create a bespoke proposal tailored to your objectives and budget.
+              Đội ngũ Elevate Media sẵn sàng tư vấn và đề xuất giải pháp phù hợp với mục tiêu và ngân sách của bạn.
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="btn-primary">
-                Request a Proposal
+                Yêu Cầu Báo Giá
               </Link>
               <a href="tel:+842361234567" className="btn-secondary">
-                Call Us Now
+                Gọi Ngay
               </a>
             </motion.div>
           </motion.div>

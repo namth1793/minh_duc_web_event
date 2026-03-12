@@ -104,14 +104,14 @@ if (blogCount.cnt === 0) {
 
   const blogs = [
     {
-      title_en: 'Creating the Perfect Wedding at Minh Đức Events',
-      title_vi: 'Tạo Nên Đám Cưới Hoàn Hảo Tại Minh Đức Events',
+      title_en: 'Creating the Perfect Wedding at Elevate Media',
+      title_vi: 'Tạo Nên Đám Cưới Hoàn Hảo Tại Elevate Media',
       category: 'Events',
       date: '2025-12-15',
       thumbnail: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80',
       excerpt_en: 'Discover how our dedicated team transforms your wedding vision into an unforgettable reality, from intimate ceremonies to grand celebrations.',
       excerpt_vi: 'Khám phá cách đội ngũ tận tâm của chúng tôi biến tầm nhìn đám cưới của bạn thành hiện thực không thể quên, từ những buổi lễ thân mật đến các buổi tiệc lớn.',
-      content_en: `<p>At Minh Đức Events, we believe every wedding is a unique love story waiting to be told. Our experienced team of event planners, florists, and hospitality professionals work tirelessly to craft ceremonies and receptions that perfectly reflect the couple's personality and vision.</p>
+      content_en: `<p>At Elevate Media, we believe every wedding is a unique love story waiting to be told. Our experienced team of event planners, florists, and hospitality professionals work tirelessly to craft ceremonies and receptions that perfectly reflect the couple's personality and vision.</p>
 <h2>The Art of Personalization</h2>
 <p>From the very first consultation, we take the time to understand what makes your relationship special. Whether you envision an intimate garden ceremony for fifty guests or a grand ballroom celebration for five hundred, our versatile venue spaces can accommodate your dream.</p>
 <p>Our design team curates every detail — from centerpiece florals that complement your chosen color palette to custom lighting arrangements that create the perfect romantic ambiance as the sun sets over our manicured gardens.</p>
@@ -120,7 +120,7 @@ if (blogCount.cnt === 0) {
 <p>Couples are invited to attend private tasting sessions where they can sample and refine their wedding menu, ensuring every flavor exceeds expectations on the big day.</p>
 <h2>Seamless Coordination</h2>
 <p>Your dedicated wedding coordinator will be by your side from planning to the final dance, ensuring every moment unfolds flawlessly. We understand that weddings are one of life's most significant milestones, and we treat each event with the reverence and attention it deserves.</p>`,
-      content_vi: `<p>Tại Minh Đức Events, chúng tôi tin rằng mỗi đám cưới là một câu chuyện tình yêu độc đáo đang chờ được kể. Đội ngũ chuyên gia tổ chức sự kiện, nghệ nhân cắm hoa và nhân viên khách sạn giàu kinh nghiệm của chúng tôi làm việc không ngừng nghỉ để tạo ra các buổi lễ và tiệc tiếp tân phản ánh hoàn hảo cá tính và tầm nhìn của cặp đôi.</p>
+      content_vi: `<p>Tại Elevate Media, chúng tôi tin rằng mỗi đám cưới là một câu chuyện tình yêu độc đáo đang chờ được kể. Đội ngũ chuyên gia tổ chức sự kiện, nghệ nhân cắm hoa và nhân viên khách sạn giàu kinh nghiệm của chúng tôi làm việc không ngừng nghỉ để tạo ra các buổi lễ và tiệc tiếp tân phản ánh hoàn hảo cá tính và tầm nhìn của cặp đôi.</p>
 <h2>Nghệ Thuật Cá Nhân Hóa</h2>
 <p>Ngay từ buổi tư vấn đầu tiên, chúng tôi dành thời gian tìm hiểu điều gì làm cho mối quan hệ của bạn trở nên đặc biệt. Dù bạn hình dung một buổi lễ vườn thân mật cho năm mươi khách hay một buổi tiệc phòng khiêu vũ lớn cho năm trăm người, không gian tổ chức sự kiện đa dạng của chúng tôi có thể đáp ứng giấc mơ của bạn.</p>
 <p>Đội ngũ thiết kế của chúng tôi chăm chút từng chi tiết — từ hoa trang trí bàn bổ sung bảng màu bạn chọn đến bố trí ánh sáng tùy chỉnh tạo ra không khí lãng mạn hoàn hảo khi mặt trời lặn trên những khu vườn được chăm sóc kỹ lưỡng của chúng tôi.</p>
@@ -140,7 +140,7 @@ if (blogCount.cnt === 0) {
       excerpt_vi: 'Khi doanh nghiệp phát triển, nhu cầu sự kiện cũng thay đổi. Khám phá những xu hướng mới nhất định hình các buổi họp doanh nghiệp năm 2025.',
       content_en: `<p>The corporate events landscape is undergoing a dramatic transformation. In 2025, companies are no longer satisfied with standard conference rooms and generic catering — they demand immersive, purposeful experiences that align with their brand values and motivate their teams.</p>
 <h2>Sustainability as Standard</h2>
-<p>Green events are no longer optional. Corporate clients are increasingly requesting zero-waste catering, locally sourced menus, and digital-first event materials. At Minh Đức Events, our sustainable event packages minimize environmental impact while maximizing the guest experience.</p>
+<p>Green events are no longer optional. Corporate clients are increasingly requesting zero-waste catering, locally sourced menus, and digital-first event materials. At Elevate Media, our sustainable event packages minimize environmental impact while maximizing the guest experience.</p>
 <h2>Hybrid Event Integration</h2>
 <p>The post-pandemic world has normalized hybrid formats. We've invested in state-of-the-art AV infrastructure that allows seamless integration between in-person and virtual attendees, ensuring your remote team feels as engaged as those in the room.</p>
 <h2>Wellness-Focused Programming</h2>
@@ -149,7 +149,7 @@ if (blogCount.cnt === 0) {
 <p>Technology enables unprecedented personalization. From custom welcome messages to curated breakout session recommendations, modern corporate events treat each attendee as an individual rather than a number.</p>`,
       content_vi: `<p>Bức tranh sự kiện doanh nghiệp đang trải qua sự chuyển đổi mạnh mẽ. Năm 2025, các công ty không còn hài lòng với phòng hội nghị tiêu chuẩn và dịch vụ ăn uống thông thường — họ đòi hỏi những trải nghiệm đắm chìm, có mục đích phù hợp với giá trị thương hiệu và truyền cảm hứng cho đội ngũ của họ.</p>
 <h2>Bền Vững Như Tiêu Chuẩn</h2>
-<p>Sự kiện xanh không còn là tùy chọn nữa. Khách hàng doanh nghiệp ngày càng yêu cầu phục vụ ăn uống không rác thải, thực đơn từ nguồn địa phương và tài liệu sự kiện ưu tiên kỹ thuật số. Tại Minh Đức Events, các gói sự kiện bền vững của chúng tôi giảm thiểu tác động môi trường trong khi tối đa hóa trải nghiệm của khách.</p>
+<p>Sự kiện xanh không còn là tùy chọn nữa. Khách hàng doanh nghiệp ngày càng yêu cầu phục vụ ăn uống không rác thải, thực đơn từ nguồn địa phương và tài liệu sự kiện ưu tiên kỹ thuật số. Tại Elevate Media, các gói sự kiện bền vững của chúng tôi giảm thiểu tác động môi trường trong khi tối đa hóa trải nghiệm của khách.</p>
 <h2>Tích Hợp Sự Kiện Hybrid</h2>
 <p>Thế giới hậu đại dịch đã bình thường hóa các định dạng hybrid. Chúng tôi đã đầu tư vào cơ sở hạ tầng AV tiên tiến cho phép tích hợp liền mạch giữa người tham dự trực tiếp và trực tuyến, đảm bảo đội ngũ làm việc từ xa của bạn cảm thấy gắn kết như những người trong phòng.</p>
 <h2>Chương Trình Tập Trung Vào Sức Khỏe</h2>
@@ -158,26 +158,26 @@ if (blogCount.cnt === 0) {
 <p>Công nghệ cho phép cá nhân hóa chưa từng có. Từ tin nhắn chào mừng tùy chỉnh đến các đề xuất phiên thảo luận nhóm được tuyển chọn, các sự kiện doanh nghiệp hiện đại đối xử với mỗi người tham dự như một cá nhân chứ không phải một con số.</p>`
     },
     {
-      title_en: 'Minh Đức Events Wins Best Venue Award 2025',
-      title_vi: 'Minh Đức Events Giành Giải Thưởng Địa Điểm Tốt Nhất 2025',
+      title_en: 'Elevate Media Wins Best Venue Award 2025',
+      title_vi: 'Elevate Media Giành Giải Thưởng Địa Điểm Tốt Nhất 2025',
       category: 'News',
       date: '2025-10-05',
       thumbnail: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80',
-      excerpt_en: 'We are thrilled to announce that Minh Đức Events has been honored with the prestigious Best Event Venue award at the Vietnam Hospitality Excellence Awards 2025.',
-      excerpt_vi: 'Chúng tôi vô cùng vui mừng thông báo rằng Minh Đức Events đã được vinh danh với giải thưởng Địa Điểm Sự Kiện Tốt Nhất danh giá tại Giải Thưởng Xuất Sắc Khách Sạn Việt Nam 2025.',
-      content_en: `<p>We are immensely proud to share that Minh Đức Events has been awarded the Best Event Venue at the prestigious Vietnam Hospitality Excellence Awards 2025, held at the Grand Palace Hotel in Hanoi.</p>
+      excerpt_en: 'We are thrilled to announce that Elevate Media has been honored with the prestigious Best Event Venue award at the Vietnam Hospitality Excellence Awards 2025.',
+      excerpt_vi: 'Chúng tôi vô cùng vui mừng thông báo rằng Elevate Media đã được vinh danh với giải thưởng Địa Điểm Sự Kiện Tốt Nhất danh giá tại Giải Thưởng Xuất Sắc Khách Sạn Việt Nam 2025.',
+      content_en: `<p>We are immensely proud to share that Elevate Media has been awarded the Best Event Venue at the prestigious Vietnam Hospitality Excellence Awards 2025, held at the Grand Palace Hotel in Hanoi.</p>
 <h2>A Testament to Our Team</h2>
 <p>This recognition belongs to every member of our extraordinary team — from our passionate event coordinators and talented chefs to our meticulous housekeeping staff and warm front-of-house professionals. Together, they deliver world-class experiences day after day.</p>
 <h2>What the Judges Said</h2>
-<p>The judging panel praised Minh Đức Events for our "exceptional attention to detail, innovative approach to event design, and consistently outstanding client feedback." They noted our seamless integration of traditional Vietnamese hospitality values with contemporary luxury standards.</p>
+<p>The judging panel praised Elevate Media for our "exceptional attention to detail, innovative approach to event design, and consistently outstanding client feedback." They noted our seamless integration of traditional Vietnamese hospitality values with contemporary luxury standards.</p>
 <h2>Looking Forward</h2>
 <p>This award motivates us to push even further. We have exciting expansions planned for 2026, including a new outdoor pavilion, an enhanced culinary program, and a dedicated pre-wedding photography garden. We look forward to welcoming you to experience these new additions.</p>
 <p>Thank you to all our clients who trusted us with their most precious moments. You are the reason we do what we do.</p>`,
-      content_vi: `<p>Chúng tôi vô cùng tự hào chia sẻ rằng Minh Đức Events đã được trao giải Địa Điểm Sự Kiện Tốt Nhất tại Giải Thưởng Xuất Sắc Khách Sạn Việt Nam 2025 danh giá, được tổ chức tại Khách Sạn Grand Palace ở Hà Nội.</p>
+      content_vi: `<p>Chúng tôi vô cùng tự hào chia sẻ rằng Elevate Media đã được trao giải Địa Điểm Sự Kiện Tốt Nhất tại Giải Thưởng Xuất Sắc Khách Sạn Việt Nam 2025 danh giá, được tổ chức tại Khách Sạn Grand Palace ở Hà Nội.</p>
 <h2>Minh Chứng Cho Đội Ngũ Của Chúng Tôi</h2>
 <p>Sự công nhận này thuộc về mọi thành viên trong đội ngũ phi thường của chúng tôi — từ các điều phối viên sự kiện đầy nhiệt huyết và đầu bếp tài năng đến nhân viên dọn phòng tỉ mỉ và nhân viên phục vụ khách ấm áp. Cùng nhau, họ mang lại những trải nghiệm đẳng cấp thế giới mỗi ngày.</p>
 <h2>Ban Giám Khảo Nói Gì</h2>
-<p>Ban giám khảo đã khen ngợi Minh Đức Events vì "sự chú ý đến chi tiết đặc biệt, cách tiếp cận sáng tạo trong thiết kế sự kiện và phản hồi khách hàng xuất sắc liên tục." Họ lưu ý sự tích hợp liền mạch của các giá trị hiếu khách truyền thống Việt Nam với các tiêu chuẩn sang trọng hiện đại.</p>
+<p>Ban giám khảo đã khen ngợi Elevate Media vì "sự chú ý đến chi tiết đặc biệt, cách tiếp cận sáng tạo trong thiết kế sự kiện và phản hồi khách hàng xuất sắc liên tục." Họ lưu ý sự tích hợp liền mạch của các giá trị hiếu khách truyền thống Việt Nam với các tiêu chuẩn sang trọng hiện đại.</p>
 <h2>Nhìn Về Phía Trước</h2>
 <p>Giải thưởng này thôi thúc chúng tôi tiến xa hơn nữa. Chúng tôi có kế hoạch mở rộng thú vị cho năm 2026, bao gồm một nhà pavilion ngoài trời mới, chương trình ẩm thực nâng cao và khu vườn chụp ảnh trước đám cưới chuyên dụng. Chúng tôi mong muốn được chào đón bạn để trải nghiệm những bổ sung mới này.</p>
 <p>Cảm ơn tất cả khách hàng đã tin tưởng giao phó cho chúng tôi những khoảnh khắc quý giá nhất của họ. Các bạn là lý do chúng tôi làm những gì chúng tôi làm.</p>`
@@ -215,7 +215,7 @@ if (blogCount.cnt === 0) {
       thumbnail: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
       excerpt_en: 'Year-end parties are more than celebrations — they are powerful moments to recognize achievements, strengthen bonds, and inspire the team for the year ahead.',
       excerpt_vi: 'Tiệc cuối năm không chỉ là lễ kỷ niệm — đó là những khoảnh khắc mạnh mẽ để ghi nhận thành tích, củng cố mối quan hệ và truyền cảm hứng cho đội ngũ cho năm sắp tới.',
-      content_en: `<p>As the calendar year draws to a close, companies across Vietnam look to celebrate their achievements and thank their teams for a year of hard work. At Minh Đức Events, we have hosted hundreds of year-end parties ranging from intimate team dinners to spectacular gala evenings for thousands of guests.</p>
+      content_en: `<p>As the calendar year draws to a close, companies across Vietnam look to celebrate their achievements and thank their teams for a year of hard work. At Elevate Media, we have hosted hundreds of year-end parties ranging from intimate team dinners to spectacular gala evenings for thousands of guests.</p>
 <h2>Setting the Right Tone</h2>
 <p>The theme of your year-end party should reflect your company's journey throughout the year. Whether it's a forward-looking "New Horizons" theme or a celebratory "Year of Achievement," our creative team will help you develop a concept that resonates with your employees and brings your company culture to life.</p>
 <h2>Entertainment That Inspires</h2>
@@ -224,7 +224,7 @@ if (blogCount.cnt === 0) {
 <p>We design bespoke awards ceremonies that make your top performers feel genuinely celebrated. Custom trophies, personalized video tributes, and professionally produced highlight reels transform a simple recognition segment into a deeply moving experience.</p>
 <h2>Culinary Journeys</h2>
 <p>Our year-end party menus are crafted to impress — from elegant plated dinners to interactive food stations showcasing the best of Vietnamese and international cuisine. Our beverage programs featuring premium cocktails and fine wines ensure the celebrations flow seamlessly from the first toast to the final dance.</p>`,
-      content_vi: `<p>Khi năm dương lịch sắp kết thúc, các công ty trên khắp Việt Nam tìm cách ăn mừng thành tích và cảm ơn đội ngũ vì một năm làm việc chăm chỉ. Tại Minh Đức Events, chúng tôi đã tổ chức hàng trăm bữa tiệc cuối năm từ những bữa tối nhóm thân mật đến những buổi dạ tiệc ngoạn mục cho hàng nghìn khách.</p>
+      content_vi: `<p>Khi năm dương lịch sắp kết thúc, các công ty trên khắp Việt Nam tìm cách ăn mừng thành tích và cảm ơn đội ngũ vì một năm làm việc chăm chỉ. Tại Elevate Media, chúng tôi đã tổ chức hàng trăm bữa tiệc cuối năm từ những bữa tối nhóm thân mật đến những buổi dạ tiệc ngoạn mục cho hàng nghìn khách.</p>
 <h2>Thiết Lập Tông Điệu Phù Hợp</h2>
 <p>Chủ đề tiệc cuối năm của bạn nên phản ánh hành trình của công ty trong suốt năm. Dù đó là chủ đề "Chân Trời Mới" hướng về tương lai hay "Năm Thành Tựu" kỷ niệm, đội ngũ sáng tạo của chúng tôi sẽ giúp bạn phát triển một khái niệm phù hợp với nhân viên và đưa văn hóa công ty vào cuộc sống.</p>
 <h2>Giải Trí Truyền Cảm Hứng</h2>
@@ -242,24 +242,24 @@ if (blogCount.cnt === 0) {
       thumbnail: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
       excerpt_en: 'In an era of grand spectacles, there is a growing appreciation for the exquisite intimacy of a perfectly curated private dinner experience.',
       excerpt_vi: 'Trong thời đại của những màn trình diễn hoành tráng, ngày càng có nhiều người trân trọng sự thân mật tuyệt vời của trải nghiệm bữa tối riêng tư được tuyển chọn hoàn hảo.',
-      content_en: `<p>There is something profoundly special about a private dining experience — a space created entirely for you and your guests, where every detail has been thoughtfully considered and every moment feels like a gift. At Minh Đức Events, our private dining offerings represent the pinnacle of our hospitality philosophy.</p>
+      content_en: `<p>There is something profoundly special about a private dining experience — a space created entirely for you and your guests, where every detail has been thoughtfully considered and every moment feels like a gift. At Elevate Media, our private dining offerings represent the pinnacle of our hospitality philosophy.</p>
 <h2>Our Private Dining Spaces</h2>
 <p>We offer three distinct private dining rooms, each with its own character and capacity. The Jasmine Room (up to 20 guests) features floor-to-ceiling windows overlooking the rose garden. The Heritage Room (up to 50 guests) celebrates traditional Vietnamese artistry with silk panels and lacquerware accents. The Terrace Suite (up to 80 guests) offers open-air dining beneath the stars with dramatic city views.</p>
 <h2>Bespoke Menu Creation</h2>
 <p>Each private dinner begins with a personal consultation with our Executive Chef. Together, you'll craft a menu that tells a story — your story. Perhaps incorporating dishes from regions significant to your family history, wines from a vintage year that holds personal meaning, or a dessert that recreates a cherished childhood memory.</p>
 <h2>The Perfect Setting</h2>
-<p>Our floristry and styling team creates unique tablescapes for each private dining event. No two tables are ever identical at Minh Đức Events. From hand-gathered wildflower arrangements to sculptural candelabras and custom-printed menus, every visual element contributes to an atmosphere of refined elegance.</p>
+<p>Our floristry and styling team creates unique tablescapes for each private dining event. No two tables are ever identical at Elevate Media. From hand-gathered wildflower arrangements to sculptural candelabras and custom-printed menus, every visual element contributes to an atmosphere of refined elegance.</p>
 <h2>Occasions Perfect for Private Dining</h2>
-<p>Birthday milestones, anniversary celebrations, engagement proposals, family reunions, client entertainment — private dining at Minh Đức Events elevates any occasion into an extraordinary memory.</p>`,
-      content_vi: `<p>Có điều gì đó đặc biệt sâu sắc về trải nghiệm ăn tối riêng tư — một không gian được tạo ra hoàn toàn cho bạn và khách của bạn, nơi mọi chi tiết đã được suy nghĩ kỹ lưỡng và mọi khoảnh khắc đều cảm thấy như một món quà. Tại Minh Đức Events, các ưu đãi ăn tối riêng tư của chúng tôi đại diện cho đỉnh cao của triết lý hiếu khách.</p>
+<p>Birthday milestones, anniversary celebrations, engagement proposals, family reunions, client entertainment — private dining at Elevate Media elevates any occasion into an extraordinary memory.</p>`,
+      content_vi: `<p>Có điều gì đó đặc biệt sâu sắc về trải nghiệm ăn tối riêng tư — một không gian được tạo ra hoàn toàn cho bạn và khách của bạn, nơi mọi chi tiết đã được suy nghĩ kỹ lưỡng và mọi khoảnh khắc đều cảm thấy như một món quà. Tại Elevate Media, các ưu đãi ăn tối riêng tư của chúng tôi đại diện cho đỉnh cao của triết lý hiếu khách.</p>
 <h2>Không Gian Ăn Tối Riêng Tư Của Chúng Tôi</h2>
 <p>Chúng tôi cung cấp ba phòng ăn tối riêng tư khác biệt, mỗi phòng có đặc điểm và sức chứa riêng. Phòng Hoa Nhài (tối đa 20 khách) có cửa sổ từ sàn đến trần nhìn ra vườn hoa hồng. Phòng Di Sản (tối đa 50 khách) tôn vinh nghệ thuật truyền thống Việt Nam với các tấm lụa và điểm nhấn đồ sơn mài. Suite Sân Thượng (tối đa 80 khách) cung cấp bữa ăn ngoài trời dưới những vì sao với tầm nhìn thành phố ấn tượng.</p>
 <h2>Tạo Thực Đơn Đặc Biệt</h2>
 <p>Mỗi bữa tối riêng tư bắt đầu bằng buổi tư vấn cá nhân với Bếp Trưởng Điều Hành của chúng tôi. Cùng nhau, bạn sẽ tạo ra một thực đơn kể một câu chuyện — câu chuyện của bạn. Có thể kết hợp các món ăn từ các vùng quan trọng với lịch sử gia đình bạn, rượu vang từ năm thu hoạch có ý nghĩa cá nhân, hoặc món tráng miệng tái hiện ký ức tuổi thơ quý giá.</p>
 <h2>Bối Cảnh Hoàn Hảo</h2>
-<p>Đội ngũ cắm hoa và tạo phong cách của chúng tôi tạo ra những bàn ăn độc đáo cho mỗi sự kiện ăn tối riêng tư. Không có hai bàn ăn nào giống nhau tại Minh Đức Events. Từ những bó hoa dại hái bằng tay đến đèn nến điêu khắc và thực đơn in tùy chỉnh, mọi yếu tố hình ảnh đều góp phần tạo nên bầu không khí sang trọng tinh tế.</p>
+<p>Đội ngũ cắm hoa và tạo phong cách của chúng tôi tạo ra những bàn ăn độc đáo cho mỗi sự kiện ăn tối riêng tư. Không có hai bàn ăn nào giống nhau tại Elevate Media. Từ những bó hoa dại hái bằng tay đến đèn nến điêu khắc và thực đơn in tùy chỉnh, mọi yếu tố hình ảnh đều góp phần tạo nên bầu không khí sang trọng tinh tế.</p>
 <h2>Các Dịp Hoàn Hảo Cho Bữa Tối Riêng Tư</h2>
-<p>Cột mốc sinh nhật, kỷ niệm ngày cưới, cầu hôn, họp mặt gia đình, tiếp khách — ăn tối riêng tư tại Minh Đức Events nâng bất kỳ dịp nào lên thành ký ức phi thường.</p>`
+<p>Cột mốc sinh nhật, kỷ niệm ngày cưới, cầu hôn, họp mặt gia đình, tiếp khách — ăn tối riêng tư tại Elevate Media nâng bất kỳ dịp nào lên thành ký ức phi thường.</p>`
     }
   ];
 
@@ -307,8 +307,8 @@ if (careerCount.cnt === 0) {
       title_vi: 'Quản Lý Quan Hệ Khách',
       department_en: 'Hospitality',
       department_vi: 'Khách Sạn',
-      description_en: 'Be the face of Minh Đức Events, ensuring every guest interaction reflects our commitment to exceptional hospitality. Manage client inquiries, coordinate pre-event consultations, and maintain our VIP guest database. Previous luxury hospitality experience is essential. Fluency in English, Vietnamese, and ideally one additional language.',
-      description_vi: 'Là bộ mặt của Minh Đức Events, đảm bảo mọi tương tác với khách phản ánh cam kết của chúng tôi về sự hiếu khách đặc biệt. Quản lý yêu cầu của khách hàng, điều phối các buổi tư vấn trước sự kiện và duy trì cơ sở dữ liệu khách VIP của chúng tôi. Kinh nghiệm khách sạn sang trọng trước đây là điều cần thiết. Thành thạo tiếng Anh, tiếng Việt và lý tưởng là thêm một ngôn ngữ nữa.',
+      description_en: 'Be the face of Elevate Media, ensuring every guest interaction reflects our commitment to exceptional hospitality. Manage client inquiries, coordinate pre-event consultations, and maintain our VIP guest database. Previous luxury hospitality experience is essential. Fluency in English, Vietnamese, and ideally one additional language.',
+      description_vi: 'Là bộ mặt của Elevate Media, đảm bảo mọi tương tác với khách phản ánh cam kết của chúng tôi về sự hiếu khách đặc biệt. Quản lý yêu cầu của khách hàng, điều phối các buổi tư vấn trước sự kiện và duy trì cơ sở dữ liệu khách VIP của chúng tôi. Kinh nghiệm khách sạn sang trọng trước đây là điều cần thiết. Thành thạo tiếng Anh, tiếng Việt và lý tưởng là thêm một ngôn ngữ nữa.',
       type: 'Full-time'
     },
     {
@@ -346,8 +346,10 @@ if (careerCount.cnt === 0) {
 const bcrypt = require('bcryptjs');
 const adminCount = db.prepare('SELECT COUNT(*) as cnt FROM admin_users').get();
 if (adminCount.cnt === 0) {
-  const hash = bcrypt.hashSync('admin123', 10);
-  db.prepare('INSERT INTO admin_users (username, password_hash) VALUES (?, ?)').run('admin', hash);
+  const adminUsername = process.env.ADMIN_USERNAME || 'admin';
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  const hash = bcrypt.hashSync(adminPassword, 10);
+  db.prepare('INSERT INTO admin_users (username, password_hash) VALUES (?, ?)').run(adminUsername, hash);
 }
 
 module.exports = db;

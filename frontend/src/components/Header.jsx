@@ -1,14 +1,16 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -20,17 +22,64 @@ export default function Header() {
     setMobileOpen(false);
   }, [location]);
 
+  // Track active section on home page
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+    const sections = ['services', 'home'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id || 'home');
+            break;
+          }
+        }
+      },
+      { rootMargin: '-40% 0px -40% 0px' }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
   const isHome = location.pathname === '/';
 
+  // type: 'anchor' = scroll-to-section on homepage | 'page' = direct route navigation
   const navLinks = [
-    { to: '/', label: t('nav.home') },
-    { to: '/brand-story', label: t('nav.brandStory') },
-    { to: '/lifestyle-events', label: t('nav.lifestyleEvents') },
-    { to: '/business-events', label: t('nav.businessEvents') },
-    { to: '/blog', label: t('nav.blog') },
-    { to: '/careers', label: t('nav.careers') },
-    { to: '/contact', label: t('nav.contact') },
+    { label: t('nav.home'), id: 'home', href: '/', type: 'anchor' },
+    { label: t('nav.aboutUs'), id: 'about', href: '/brand-story', type: 'page' },
+    { label: t('nav.ourServices'), id: 'services', href: '/#services', type: 'anchor' },
+    { label: t('nav.blog'), id: 'blog', href: '/blog', type: 'page' },
+    { label: t('nav.careers'), id: 'careers', href: '/careers', type: 'page' },
+    { label: t('nav.contact'), id: 'contact', href: '/contact', type: 'page' },
   ];
+
+  const handleNavClick = (e, link) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    if (link.type === 'page') {
+      navigate(link.href);
+      return;
+    }
+    // anchor type
+    if (link.id === 'home') {
+      if (!isHome) navigate('/');
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    if (isHome) {
+      const el = document.getElementById(link.id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById(link.id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 400);
+    }
+  };
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'vi' : 'en');
@@ -41,7 +90,15 @@ export default function Header() {
     : 'bg-transparent';
 
   const textColor = scrolled || !isHome ? 'text-dark' : 'text-white';
-  const logoColor = scrolled || !isHome ? 'text-gold' : 'text-white';
+
+  const isActive = (link) => {
+    if (link.type === 'page') {
+      if (link.id === 'blog') return location.pathname.startsWith('/blog');
+      return location.pathname === link.href;
+    }
+    if (!isHome) return false;
+    return activeSection === link.id;
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerBg}`}>
@@ -59,20 +116,18 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.to === '/'}
-                className={({ isActive }) =>
-                  `font-sans text-xs tracking-widest uppercase transition-colors duration-300 pb-0.5 border-b border-transparent
-                  ${isActive
+              <a
+                key={link.id}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link)}
+                className={`font-sans text-xs tracking-widest uppercase transition-colors duration-300 pb-0.5 border-b border-transparent cursor-pointer
+                  ${isActive(link)
                     ? 'text-gold border-gold'
                     : `${textColor} hover:text-gold hover:border-gold`
-                  }`
-                }
+                  }`}
               >
                 {link.label}
-              </NavLink>
+              </a>
             ))}
           </nav>
 
@@ -114,17 +169,15 @@ export default function Header() {
           >
             <nav className="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  end={link.to === '/'}
-                  className={({ isActive }) =>
-                    `font-sans text-sm tracking-widest uppercase py-2 border-b border-cream/50 transition-colors
-                    ${isActive ? 'text-gold' : 'text-dark hover:text-gold'}`
-                  }
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link)}
+                  className={`font-sans text-sm tracking-widest uppercase py-2 border-b border-cream/50 transition-colors cursor-pointer
+                    ${isActive(link) ? 'text-gold' : 'text-dark hover:text-gold'}`}
                 >
                   {link.label}
-                </NavLink>
+                </a>
               ))}
             </nav>
           </motion.div>

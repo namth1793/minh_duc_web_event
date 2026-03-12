@@ -14,8 +14,18 @@ const stagger = {
 
 const events = [
   {
-    key: 'wedding',
-    img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80',
+    key: 'openingCeremony',
+    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+    reverse: false,
+  },
+  {
+    key: 'productLaunch',
+    img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&q=80',
+    reverse: true,
+  },
+  {
+    key: 'conferenceEvent',
+    img: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80',
     reverse: false,
   },
   {
@@ -24,17 +34,7 @@ const events = [
     reverse: true,
   },
   {
-    key: 'birthday',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1200&q=80',
-    reverse: false,
-  },
-  {
-    key: 'dinnerParty',
-    img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80',
-    reverse: true,
-  },
-  {
-    key: 'privateCelebration',
+    key: 'yearEndParty',
     img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80',
     reverse: false,
   },
@@ -138,11 +138,11 @@ export default function LifestyleEventsPage() {
                   {t(`lifestyle.${ev.key}.desc`)}
                 </motion.p>
                 <motion.p variants={fadeUp} className="font-sans text-gray-500 leading-relaxed mb-8">
-                  At Minh Đức Events, every celebration is crafted as a unique masterpiece. Our dedicated team of coordinators, designers, and culinary experts work in perfect harmony to bring your vision to life, ensuring each moment exceeds your highest expectations.
+                  Tại Elevate Media, mỗi sự kiện được xây dựng theo concept riêng biệt. Đội ngũ của chúng tôi — từ lên ý tưởng, viết kịch bản đến triển khai thực tế — phối hợp chặt chẽ để đảm bảo sự kiện thể hiện đúng tinh thần thương hiệu và vượt mọi kỳ vọng.
                 </motion.p>
                 <motion.div variants={fadeUp}>
                   <a href="#inquiry" className="btn-primary">
-                    Inquire About This Event
+                    Yêu Cầu Báo Giá
                   </a>
                 </motion.div>
               </motion.div>

@@ -9,6 +9,84 @@ const EMPTY_FORM = {
 
 const JOB_TYPES = ['Full-time', 'Part-time', 'Contract', 'Internship'];
 
+function formatDate(str) {
+  if (!str) return '—';
+  try {
+    return new Date(str).toLocaleString('en-GB', {
+      day: '2-digit', month: 'short', year: 'numeric',
+      hour: '2-digit', minute: '2-digit',
+    });
+  } catch {
+    return str;
+  }
+}
+
+function Table({ headers, rows, renderRow, loading, empty }) {
+  return (
+    <div style={{ background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6, overflow: 'hidden' }}>
+      {loading ? (
+        <div style={{ padding: 40, textAlign: 'center', color: '#888' }}>Đang tải...</div>
+      ) : rows.length === 0 ? (
+        <div style={{ padding: 40, textAlign: 'center', color: '#aaa' }}>
+          {empty || 'Chưa có dữ liệu.'}
+        </div>
+      ) : (
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 700 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #eee', background: '#fafafa' }}>
+                {headers.map(h => (
+                  <th key={h} style={{
+                    padding: '11px 14px', textAlign: 'left', fontSize: 11,
+                    fontWeight: 600, color: '#666', letterSpacing: '0.08em',
+                    textTransform: 'uppercase', whiteSpace: 'nowrap',
+                  }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, idx) => renderRow(row, idx))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CellText({ primary, secondary }) {
+  return (
+    <td style={{ padding: '10px 14px', verticalAlign: 'top' }}>
+      <div style={{ fontSize: 13, color: '#111' }}>{primary || '—'}</div>
+      {secondary && <div style={{ fontSize: 11, color: '#888', marginTop: 2 }}>{secondary}</div>}
+    </td>
+  );
+}
+
+function MessageCell({ text }) {
+  const [expanded, setExpanded] = useState(false);
+  if (!text) return <td style={{ padding: '10px 14px', color: '#aaa', fontSize: 12 }}>—</td>;
+  const short = text.length > 60 ? text.slice(0, 60) + '...' : text;
+  return (
+    <td style={{ padding: '10px 14px', maxWidth: 240 }}>
+      <div style={{ fontSize: 12, color: '#555', lineHeight: 1.5 }}>
+        {expanded ? text : short}
+      </div>
+      {text.length > 60 && (
+        <button
+          onClick={() => setExpanded(e => !e)}
+          style={{
+            background: 'none', border: 'none', color: '#C9A96E', fontSize: 11,
+            cursor: 'pointer', padding: '2px 0', fontFamily: 'Inter, sans-serif',
+          }}
+        >
+          {expanded ? 'Thu gọn' : 'Xem thêm'}
+        </button>
+      )}
+    </td>
+  );
+}
+
 function Toast({ message, type, onClose }) {
   useEffect(() => {
     const t = setTimeout(onClose, 3000);
@@ -138,7 +216,7 @@ function FormModal({ job, onSave, onCancel, loading }) {
   );
 }
 
-export default function CareersManager() {
+function JobsTab() {
   const { authHeader } = useAdmin();
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -199,10 +277,7 @@ export default function CareersManager() {
       {toast && <Toast {...toast} onClose={() => setToast(null)} />}
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-        <div>
-          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Tuyển Dụng</h3>
-          <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>{jobs.length} tin tuyển dụng</p>
-        </div>
+        <p style={{ margin: 0, fontSize: 13, color: '#888' }}>{jobs.length} tin tuyển dụng</p>
         <button
           onClick={() => { setModalJob(null); setShowModal(true); }}
           style={{
@@ -310,6 +385,107 @@ export default function CareersManager() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function ApplicationsTab() {
+  const { authHeader } = useAdmin();
+  const [applications, setApplications] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchApplications = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await api.get('/api/admin/applications', { headers: authHeader() });
+      setApplications(res.data);
+    } catch {
+      // silently fail, table shows empty
+    } finally {
+      setLoading(false);
+    }
+  }, [authHeader]);
+
+  useEffect(() => { fetchApplications(); }, [fetchApplications]);
+
+  return (
+    <div>
+      <p style={{ margin: '0 0 16px', fontSize: 13, color: '#888' }}>
+        Chỉ xem. {applications.length} đơn ứng tuyển nhận được.
+      </p>
+      <Table
+        loading={loading}
+        rows={applications}
+        empty="Chưa có đơn ứng tuyển nào."
+        headers={['Họ tên', 'Email', 'Điện thoại', 'Vị trí ứng tuyển', 'Tin nhắn', 'Ngày gửi']}
+        renderRow={(row, idx) => (
+          <tr key={row.id}
+            style={{ borderBottom: idx < applications.length - 1 ? '1px solid #f0f0f0' : 'none' }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#fafafa')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+          >
+            <CellText primary={row.name} />
+            <CellText primary={row.email} />
+            <CellText primary={row.phone} />
+            <td style={{ padding: '10px 14px' }}>
+              <div style={{ fontSize: 13, color: '#111' }}>{row.job_title_en || '—'}</div>
+              {row.job_id && <div style={{ fontSize: 11, color: '#aaa' }}>ID: {row.job_id}</div>}
+            </td>
+            <MessageCell text={row.message} />
+            <td style={{ padding: '10px 14px', fontSize: 11, color: '#888', whiteSpace: 'nowrap' }}>
+              {formatDate(row.created_at)}
+            </td>
+          </tr>
+        )}
+      />
+    </div>
+  );
+}
+
+export default function CareersManager() {
+  const [activeTab, setActiveTab] = useState('jobs');
+
+  const tabs = [
+    { key: 'jobs', label: 'Tin Tuyển Dụng' },
+    { key: 'applications', label: 'Đơn Ứng Tuyển' },
+  ];
+
+  function tabStyle(key) {
+    const isActive = activeTab === key;
+    return {
+      padding: '9px 18px',
+      background: isActive ? '#111' : '#fff',
+      color: isActive ? '#fff' : '#555',
+      border: '1px solid',
+      borderColor: isActive ? '#111' : '#e5e5e5',
+      borderRadius: 4,
+      cursor: 'pointer',
+      fontSize: 13,
+      fontFamily: 'Inter, sans-serif',
+      fontWeight: isActive ? 600 : 400,
+      transition: 'all 0.15s',
+    };
+  }
+
+  return (
+    <div style={{ fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ marginBottom: 20 }}>
+        <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Tuyển Dụng</h3>
+        <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>
+          Quản lý tin tuyển dụng và xem đơn ứng tuyển nhận được.
+        </p>
+      </div>
+
+      <div style={{ display: 'flex', gap: 8, marginBottom: 24 }}>
+        {tabs.map(t => (
+          <button key={t.key} style={tabStyle(t.key)} onClick={() => setActiveTab(t.key)}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'jobs' && <JobsTab />}
+      {activeTab === 'applications' && <ApplicationsTab />}
     </div>
   );
 }

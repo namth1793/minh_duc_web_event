@@ -73,7 +73,7 @@ function ApplyModal({ job, lang, onClose }) {
             <div className="text-5xl mb-4">✓</div>
             <p className="font-sans text-gray-600">{t('careersPage.modal.success')}</p>
             <button onClick={onClose} className="btn-primary mt-6">
-              Close
+              {t('careersPage.modal.close')}
             </button>
           </div>
         ) : (
@@ -127,7 +127,7 @@ function ApplyModal({ job, lang, onClose }) {
                 onChange={handleChange}
                 rows={5}
                 className="luxury-textarea"
-                placeholder="Tell us about yourself and why you'd like to join Minh Đức Events..."
+                placeholder="Tell us about yourself and why you'd like to join Elevate Media..."
               />
             </div>
 
@@ -231,12 +231,7 @@ export default function CareersPage() {
               viewport={{ once: true }}
               variants={stagger}
             >
-              {[
-                { icon: '🌱', title: 'Growth', desc: 'Continuous training and advancement opportunities' },
-                { icon: '🤝', title: 'Collaboration', desc: 'A culture of teamwork and mutual respect' },
-                { icon: '✨', title: 'Excellence', desc: 'We set and achieve the highest standards' },
-                { icon: '🌏', title: 'Exposure', desc: 'International clients and industry connections' },
-              ].map((item, i) => (
+              {(t('careersPage.cultureCards', { returnObjects: true }) || []).map((item, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
@@ -329,18 +324,18 @@ export default function CareersPage() {
             variants={stagger}
           >
             <motion.p variants={fadeUp} className="font-sans text-xs tracking-widest uppercase text-gold mb-4">
-              Don't See Your Role?
+              {t('careersPage.openApp.eyebrow')}
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-serif text-3xl text-white font-light mb-4">
-              We're Always Looking for Exceptional Talent
+              {t('careersPage.openApp.title')}
             </motion.h2>
             <motion.div variants={fadeUp} className="gold-divider mb-8" />
             <motion.p variants={fadeUp} className="font-sans text-gray-400 mb-8 leading-relaxed">
-              If you believe you have what it takes to contribute to Minh Đức Events, we'd love to hear from you.
+              {t('careersPage.openApp.body')}
             </motion.p>
             <motion.div variants={fadeUp}>
-              <a href="mailto:careers@minhduc.vn" className="btn-gold">
-                Send Open Application
+              <a href="mailto:careers@elevatemedia.vn" className="btn-gold">
+                {t('careersPage.openApp.cta')}
               </a>
             </motion.div>
           </motion.div>

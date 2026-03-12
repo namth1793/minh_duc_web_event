@@ -3,20 +3,6 @@ import api from '../../../lib/api';
 import { useAdmin } from '../../../context/AdminContext';
 import ImageUpload from '../../../components/ImageUpload';
 
-const PAGES = [
-  { key: 'home', label: 'Trang Chủ', sections: ['hero', 'about', 'services', 'mission'] },
-  { key: 'brand-story', label: 'Câu Chuyện', sections: ['hero', 'vision', 'architecture', 'hospitality'] },
-  { key: 'lifestyle-events', label: 'Sự Kiện', sections: ['hero', 'events'] },
-  { key: 'business-events', label: 'Booth & Livestream', sections: ['hero', 'services'] },
-  { key: 'blog', label: 'Blog', sections: ['hero'] },
-  { key: 'careers', label: 'Tuyển Dụng', sections: ['hero', 'culture'] },
-  { key: 'contact', label: 'Liên Hệ', sections: ['hero'] },
-  { key: 'service-event', label: 'DV: Sự Kiện', sections: ['hero'] },
-  { key: 'service-booth', label: 'DV: Booth', sections: ['hero'] },
-  { key: 'service-livestream', label: 'DV: Livestream', sections: ['hero'] },
-  { key: 'service-creative', label: 'DV: Creative', sections: ['hero'] },
-];
-
 function Toast({ message, type, onClose }) {
   useEffect(() => {
     const t = setTimeout(onClose, 3000);
@@ -36,11 +22,108 @@ function Toast({ message, type, onClose }) {
   );
 }
 
-const EMPTY_FORM = { section: '', label: '', url: '', sort_order: 0 };
-
-function AddImageForm({ page, sections, onAdd, onCancel }) {
+function SectionEditor({ pageKey, section, initialData }) {
   const { authHeader } = useAdmin();
-  const [form, setForm] = useState({ ...EMPTY_FORM, section: sections[0] || '' });
+  const [content_en, setContentEn] = useState(initialData?.content_en || '');
+  const [content_vi, setContentVi] = useState(initialData?.content_vi || '');
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setContentEn(initialData?.content_en || '');
+    setContentVi(initialData?.content_vi || '');
+  }, [initialData]);
+
+  async function handleSave() {
+    setSaving(true);
+    setError(false);
+    try {
+      await api.put(
+        `/api/admin/content/${pageKey}/${section}`,
+        { content_en, content_vi },
+        { headers: authHeader() }
+      );
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 3000);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const textareaStyle = {
+    width: '100%', background: '#fafafa', border: '1px solid #ddd',
+    borderRadius: 4, padding: '8px 12px', fontSize: 12,
+    fontFamily: 'monospace', boxSizing: 'border-box', outline: 'none',
+    color: '#111', height: 100, resize: 'vertical',
+  };
+
+  return (
+    <div style={{
+      background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6,
+      padding: '16px 20px', marginBottom: 12,
+    }}>
+      <div style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12,
+      }}>
+        <div>
+          <span style={{
+            fontSize: 11, fontWeight: 600, color: '#111', letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+          }}>{section}</span>
+          <span style={{ fontSize: 11, color: '#aaa', marginLeft: 8 }}>
+            {pageKey} / {section}
+          </span>
+        </div>
+        <button
+          onClick={handleSave}
+          disabled={saving}
+          style={{
+            padding: '5px 16px',
+            background: error ? '#7f1d1d' : saved ? '#065f46' : saving ? '#888' : '#C9A96E',
+            border: 'none', borderRadius: 3, fontSize: 12,
+            cursor: saving ? 'not-allowed' : 'pointer',
+            color: (saved || error) ? '#fff' : '#111', fontWeight: 500,
+            transition: 'background 0.2s',
+          }}
+        >
+          {error ? '✕ Lỗi' : saved ? '✓ Đã lưu' : saving ? 'Đang lưu...' : 'Lưu'}
+        </button>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+        <div>
+          <label style={{ fontSize: 10, color: '#888', display: 'block', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            Nội dung EN (JSON hoặc văn bản)
+          </label>
+          <textarea
+            style={textareaStyle}
+            value={content_en}
+            onChange={e => setContentEn(e.target.value)}
+            placeholder='e.g. {"title": "Welcome", "subtitle": "..."}'
+          />
+        </div>
+        <div>
+          <label style={{ fontSize: 10, color: '#888', display: 'block', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            Nội dung VI (JSON hoặc văn bản)
+          </label>
+          <textarea
+            style={textareaStyle}
+            value={content_vi}
+            onChange={e => setContentVi(e.target.value)}
+            placeholder='e.g. {"title": "Chào Mừng", "subtitle": "..."}'
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ImageAddModal({ pageKey, imageSections, onAdd, onCancel }) {
+  const { authHeader } = useAdmin();
+  const [form, setForm] = useState({ section: imageSections[0] || '', label: '', url: '', sort_order: 0 });
   const [saving, setSaving] = useState(false);
 
   function set(field, value) {
@@ -51,10 +134,10 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
     e.preventDefault();
     setSaving(true);
     try {
-      const res = await api.post('/api/admin/images', { ...form, page }, { headers: authHeader() });
+      const res = await api.post('/api/admin/images', { ...form, page: pageKey }, { headers: authHeader() });
       onAdd(res.data);
     } catch {
-      // parent handles
+      // parent handles toast
     } finally {
       setSaving(false);
     }
@@ -86,14 +169,13 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
           <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#111' }}>Thêm Hình Ảnh</h3>
           <button onClick={onCancel} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#888' }}>×</button>
         </div>
-
         <form onSubmit={handleSubmit} style={{ padding: '24px 28px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
             <div>
               <label style={labelStyle}>Khu vực</label>
               <select style={{ ...inputStyle, cursor: 'pointer' }} value={form.section}
                 onChange={e => set('section', e.target.value)}>
-                {sections.map(s => <option key={s} value={s}>{s}</option>)}
+                {imageSections.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
             </div>
             <div>
@@ -107,7 +189,6 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
                 onChange={e => set('sort_order', parseInt(e.target.value) || 0)} />
             </div>
           </div>
-
           <div style={{ marginTop: 16 }}>
             <ImageUpload
               label="Hình ảnh"
@@ -116,7 +197,6 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
               required
             />
           </div>
-
           <div style={{
             marginTop: 24, display: 'flex', gap: 10, justifyContent: 'flex-end',
             paddingTop: 16, borderTop: '1px solid #eee',
@@ -139,7 +219,7 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
   );
 }
 
-function EditImageModal({ image, sections, onSave, onCancel }) {
+function ImageEditModal({ image, imageSections, onSave, onCancel }) {
   const { authHeader } = useAdmin();
   const [form, setForm] = useState({ ...image });
   const [saving, setSaving] = useState(false);
@@ -155,7 +235,7 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
       const res = await api.put(`/api/admin/images/${image.id}`, form, { headers: authHeader() });
       onSave(res.data);
     } catch {
-      // parent handles
+      // parent handles toast
     } finally {
       setSaving(false);
     }
@@ -187,14 +267,13 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
           <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#111' }}>Sửa Hình Ảnh</h3>
           <button onClick={onCancel} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#888' }}>×</button>
         </div>
-
         <form onSubmit={handleSubmit} style={{ padding: '24px 28px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
             <div>
               <label style={labelStyle}>Khu vực</label>
               <select style={{ ...inputStyle, cursor: 'pointer' }} value={form.section}
                 onChange={e => set('section', e.target.value)}>
-                {sections.map(s => <option key={s} value={s}>{s}</option>)}
+                {imageSections.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
             </div>
             <div>
@@ -208,7 +287,6 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
                 onChange={e => set('sort_order', parseInt(e.target.value) || 0)} />
             </div>
           </div>
-
           <div style={{ marginTop: 16 }}>
             <ImageUpload
               label="Hình ảnh"
@@ -217,7 +295,6 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
               required
             />
           </div>
-
           <div style={{
             marginTop: 24, display: 'flex', gap: 10, justifyContent: 'flex-end',
             paddingTop: 16, borderTop: '1px solid #eee',
@@ -240,21 +317,73 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
   );
 }
 
-export default function ImagesManager() {
+function ContentTab({ pageKey, contentSections }) {
   const { authHeader } = useAdmin();
-  const [activePage, setActivePage] = useState('home');
+  const [contentMap, setContentMap] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [toast, setToast] = useState(null);
+
+  const fetchContent = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await api.get(`/api/admin/content/${pageKey}`, { headers: authHeader() });
+      const map = {};
+      for (const row of res.data) {
+        map[row.section] = row;
+      }
+      setContentMap(map);
+    } catch {
+      setToast({ message: 'Không thể tải nội dung', type: 'error' });
+    } finally {
+      setLoading(false);
+    }
+  }, [pageKey, authHeader]);
+
+  useEffect(() => { fetchContent(); }, [fetchContent]);
+
+  return (
+    <div>
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      <div style={{
+        background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 4,
+        padding: '10px 16px', marginBottom: 20, fontSize: 12, color: '#92400e',
+      }}>
+        <strong>Lưu ý:</strong> Mỗi khu vực chấp nhận JSON (dữ liệu có cấu trúc) hoặc văn bản thuần.
+        Nội dung được tải qua <code>/api/admin/content/{pageKey}</code>.
+      </div>
+      {loading ? (
+        <div style={{ padding: 40, textAlign: 'center', color: '#888' }}>Đang tải...</div>
+      ) : (
+        <div>
+          <p style={{ fontSize: 12, color: '#999', margin: '0 0 16px' }}>
+            {contentSections.length} khu vực nội dung
+          </p>
+          {contentSections.map(section => (
+            <SectionEditor
+              key={`${pageKey}-${section}`}
+              pageKey={pageKey}
+              section={section}
+              initialData={contentMap[section]}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ImagesTab({ pageKey, imageSections }) {
+  const { authHeader } = useAdmin();
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [toast, setToast] = useState(null);
   const [showAdd, setShowAdd] = useState(false);
   const [editImage, setEditImage] = useState(null);
   const [deleteId, setDeleteId] = useState(null);
 
-  const pageConfig = PAGES.find(p => p.key === activePage);
-
   const showToast = (message, type = 'success') => setToast({ message, type });
 
-  const fetchImages = useCallback(async (pageKey) => {
+  const fetchImages = useCallback(async () => {
     setLoading(true);
     try {
       const res = await api.get(`/api/admin/images/${pageKey}`, { headers: authHeader() });
@@ -264,11 +393,9 @@ export default function ImagesManager() {
     } finally {
       setLoading(false);
     }
-  }, [authHeader]);
+  }, [pageKey, authHeader]);
 
-  useEffect(() => {
-    fetchImages(activePage);
-  }, [activePage, fetchImages]);
+  useEffect(() => { fetchImages(); }, [fetchImages]);
 
   function handleAdded(img) {
     setImages(prev => [...prev, img]);
@@ -288,32 +415,17 @@ export default function ImagesManager() {
       setImages(prev => prev.filter(i => i.id !== id));
       showToast('Đã xóa hình ảnh');
     } catch {
-      showToast('Không thể xóa', 'error');
+      showToast('Không thể xóa hình ảnh', 'error');
     } finally {
       setDeleteId(null);
     }
   }
 
-  const tabStyle = (key) => ({
-    padding: '7px 14px',
-    background: activePage === key ? '#111' : '#fff',
-    color: activePage === key ? '#fff' : '#555',
-    border: '1px solid', borderColor: activePage === key ? '#111' : '#e5e5e5',
-    borderRadius: 4, cursor: 'pointer', fontSize: 12,
-    fontFamily: 'Inter, sans-serif',
-    fontWeight: activePage === key ? 600 : 400,
-    whiteSpace: 'nowrap',
-  });
-
   return (
     <div>
       {toast && <Toast {...toast} onClose={() => setToast(null)} />}
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
-        <div>
-          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Hình Ảnh Trang</h3>
-          <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>Quản lý hình ảnh theo URL, phân loại theo trang và khu vực.</p>
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 20 }}>
         <button
           onClick={() => setShowAdd(true)}
           style={{
@@ -325,15 +437,6 @@ export default function ImagesManager() {
         </button>
       </div>
 
-      {/* Page tabs */}
-      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>
-        {PAGES.map(p => (
-          <button key={p.key} style={tabStyle(p.key)} onClick={() => setActivePage(p.key)}>
-            {p.label}
-          </button>
-        ))}
-      </div>
-
       {loading ? (
         <div style={{ padding: 40, textAlign: 'center', color: '#888' }}>Đang tải...</div>
       ) : images.length === 0 ? (
@@ -342,7 +445,7 @@ export default function ImagesManager() {
           padding: 48, textAlign: 'center', color: '#aaa',
         }}>
           <div style={{ fontSize: 32, marginBottom: 12 }}>🖼</div>
-          <p style={{ margin: 0, fontSize: 14 }}>Chưa có ảnh nào cho {pageConfig?.label}.</p>
+          <p style={{ margin: 0, fontSize: 14 }}>Chưa có ảnh nào cho trang này.</p>
           <p style={{ margin: '6px 0 0', fontSize: 12 }}>Nhấn "Thêm Hình Ảnh" để bắt đầu.</p>
         </div>
       ) : (
@@ -353,7 +456,9 @@ export default function ImagesManager() {
               overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
             }}>
               <div style={{ position: 'relative', paddingTop: '66%', background: '#f5f5f5' }}>
-                <img src={img.url} alt={img.label || ''}
+                <img
+                  src={img.url}
+                  alt={img.label || ''}
                   style={{
                     position: 'absolute', inset: 0, width: '100%', height: '100%',
                     objectFit: 'cover',
@@ -400,18 +505,18 @@ export default function ImagesManager() {
       )}
 
       {showAdd && (
-        <AddImageForm
-          page={activePage}
-          sections={pageConfig?.sections || []}
+        <ImageAddModal
+          pageKey={pageKey}
+          imageSections={imageSections}
           onAdd={handleAdded}
           onCancel={() => setShowAdd(false)}
         />
       )}
 
       {editImage && (
-        <EditImageModal
+        <ImageEditModal
           image={editImage}
-          sections={pageConfig?.sections || []}
+          imageSections={imageSections}
           onSave={handleEdited}
           onCancel={() => setEditImage(null)}
         />
@@ -427,7 +532,9 @@ export default function ImagesManager() {
             boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
           }}>
             <h4 style={{ margin: '0 0 12px', color: '#111' }}>Xóa Hình Ảnh?</h4>
-            <p style={{ margin: '0 0 20px', color: '#555', fontSize: 13 }}>Bạn có chắc muốn xóa? Hành động này không thể hoàn tác.</p>
+            <p style={{ margin: '0 0 20px', color: '#555', fontSize: 13 }}>
+              Bạn có chắc muốn xóa? Hành động này không thể hoàn tác.
+            </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end' }}>
               <button onClick={() => setDeleteId(null)} style={{
                 padding: '8px 18px', background: '#fff', border: '1px solid #ddd',
@@ -440,6 +547,58 @@ export default function ImagesManager() {
             </div>
           </div>
         </div>
+      )}
+    </div>
+  );
+}
+
+export default function PageManager({ pageKey, contentSections, imageSections, title, description }) {
+  const [activeTab, setActiveTab] = useState('content');
+
+  const tabs = [
+    { key: 'content', label: 'Nội Dung' },
+    { key: 'images', label: 'Hình Ảnh' },
+  ];
+
+  function tabStyle(key) {
+    const isActive = activeTab === key;
+    return {
+      padding: '9px 20px',
+      background: isActive ? '#111' : '#fff',
+      color: isActive ? '#fff' : '#555',
+      border: '1px solid',
+      borderColor: isActive ? '#111' : '#e5e5e5',
+      borderRadius: 4,
+      cursor: 'pointer',
+      fontSize: 13,
+      fontFamily: 'Inter, sans-serif',
+      fontWeight: isActive ? 600 : 400,
+      transition: 'all 0.15s',
+    };
+  }
+
+  return (
+    <div style={{ fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ marginBottom: 20 }}>
+        <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>{title}</h3>
+        {description && (
+          <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>{description}</p>
+        )}
+      </div>
+
+      <div style={{ display: 'flex', gap: 8, marginBottom: 24 }}>
+        {tabs.map(t => (
+          <button key={t.key} style={tabStyle(t.key)} onClick={() => setActiveTab(t.key)}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'content' && (
+        <ContentTab pageKey={pageKey} contentSections={contentSections} />
+      )}
+      {activeTab === 'images' && (
+        <ImagesTab pageKey={pageKey} imageSections={imageSections} />
       )}
     </div>
   );

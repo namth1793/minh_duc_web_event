@@ -1,90 +1,156 @@
 {
   "nav": {
     "home": "Trang Chủ",
-    "brandStory": "Câu Chuyện",
-    "lifestyleEvents": "Sự Kiện Cá Nhân",
-    "businessEvents": "Sự Kiện Doanh Nghiệp",
-    "blog": "Tin Tức",
+    "aboutUs": "Về Chúng Tôi",
+    "ourServices": "Dịch Vụ",
+    "workingProcess": "Quy Trình",
+    "whyChooseUs": "Tại Sao Chọn",
+    "mission": "Tầm Nhìn",
+    "blog": "Blog",
     "careers": "Tuyển Dụng",
     "contact": "Liên Hệ"
   },
   "hero": {
-    "tagline": "Nơi Thiên Nhiên Truyền Cảm Hứng Cho Những Kỷ Niệm Vĩnh Cửu",
-    "subtitle": "Không gian sự kiện phi thường nơi vẻ đẹp kiến trúc hòa quyện với thiên nhiên, tạo nên những khoảnh khắc không thể nào quên cho mọi dịp.",
-    "exploreEvents": "Khám Phá Sự Kiện",
+    "tagline": "Nâng Tầm Thương Hiệu. Tạo Ra Tác Động.",
+    "subtitle": "Chúng tôi là agency chuyên về tổ chức sự kiện, thi công booth & livestream bán hàng, tập trung vào việc nâng tầm thương hiệu thông qua chiến lược rõ ràng và thực thi chuyên nghiệp.",
+    "exploreEvents": "Dịch Vụ Của Chúng Tôi",
     "inquireNow": "Liên Hệ Ngay"
   },
   "about": {
     "eyebrow": "Chào Mừng Đến Elevate Media",
-    "title": "Nơi Mỗi Chi Tiết Trở Thành Kỷ Niệm",
-    "p1": "Nằm giữa những khu vườn tươi tốt và kiến trúc vượt thời gian, Elevate Media là điểm đến sự kiện sang trọng được tôn vinh nhất Việt Nam. Hơn một thập kỷ qua, chúng tôi được tin tưởng giao phó những cột mốc quý giá nhất trong cuộc đời — từ những kỷ niệm thân mật đến những dạ tiệc doanh nghiệp hoành tráng.",
-    "p2": "Triết lý của chúng tôi rất đơn giản: không có hai sự kiện nào nên cảm thấy giống nhau. Mỗi lễ kỷ niệm mà chúng tôi tạo ra là một kiệt tác riêng biệt, được điều chỉnh để phản ánh tinh thần độc đáo của khách hàng.",
-    "discoverOurStory": "Khám Phá Câu Chuyện"
+    "title": "From Idea To Impact",
+    "tagline": "Nâng tầm thương hiệu bằng chiến lược và trải nghiệm.",
+    "tagline1": "Biến ý tưởng thành trải nghiệm.",
+    "tagline2": "Biến sự kiện thành dấu ấn.",
+    "tagline3": "Biến livestream thành doanh thu.",
+    "p1": "Elevate Media là agency chuyên về tổ chức sự kiện, thi công booth & livestream bán hàng — tập trung vào việc nâng tầm thương hiệu thông qua chiến lược rõ ràng và thực thi chuyên nghiệp.",
+    "p2": "Chúng tôi không chỉ tổ chức sự kiện, mà kiến tạo giải pháp toàn diện từ ý tưởng đến vận hành, đảm bảo mỗi dự án đều đạt được giá trị và hiệu quả tối ưu.",
+    "discoverOurStory": "Về Chúng Tôi"
   },
   "lifestyle": {
-    "eyebrow": "Sự Kiện Cá Nhân",
-    "title": "Kỷ Niệm Những Khoảnh Khắc Đẹp Nhất Trong Cuộc Đời",
-    "subtitle": "Từ những kỷ niệm thân mật đến tiệc cưới hoành tráng, chúng tôi biến tầm nhìn của bạn thành hiện thực phi thường.",
-    "explore": "Khám Phá",
-    "wedding": {
-      "title": "Đám Cưới",
-      "desc": "Ngày trọng đại của bạn, được tạo ra với tình yêu và sự chú ý tỉ mỉ đến từng chi tiết."
+    "eyebrow": "Sự Kiện & Trải Nghiệm Doanh Nghiệp",
+    "title": "Tổ Chức Sự Kiện Chuyên Nghiệp",
+    "subtitle": "Xây dựng concept, kịch bản và triển khai trọn gói — đảm bảo mỗi sự kiện thể hiện đúng tinh thần thương hiệu và tạo dấu ấn chuyên nghiệp.",
+    "explore": "Tìm Hiểu Thêm",
+    "openingCeremony": {
+      "title": "Khai Trương & Khởi Công",
+      "desc": "Lễ khai trương, lễ khởi công, lễ động thổ — tổ chức bài bản, tạo ấn tượng đầu tiên mạnh mẽ cho thương hiệu."
+    },
+    "productLaunch": {
+      "title": "Ra Mắt Sản Phẩm",
+      "desc": "Sự kiện ra mắt sản phẩm được dàn dựng chuyên nghiệp, truyền tải đúng thông điệp và tạo buzz mạnh trên thị trường."
+    },
+    "conferenceEvent": {
+      "title": "Hội Nghị – Hội Thảo",
+      "desc": "Tổ chức hội nghị, hội thảo doanh nghiệp từ quy mô nhỏ đến lớn — thiết bị hiện đại, vận hành trơn tru."
     },
     "anniversary": {
-      "title": "Kỷ Niệm Ngày Cưới",
-      "desc": "Kỷ niệm hành trình tình yêu với một sự kiện ý nghĩa như câu chuyện của bạn."
+      "title": "Kỷ Niệm Thành Lập",
+      "desc": "Lễ kỷ niệm thành lập công ty theo concept riêng, tôn vinh hành trình và truyền cảm hứng cho tương lai."
     },
-    "dinnerParty": {
-      "title": "Tiệc Tối",
-      "desc": "Những buổi gặp gỡ thân mật được nâng tầm với ẩm thực tinh tế và dịch vụ hoàn hảo."
-    },
-    "birthday": {
-      "title": "Tiệc Sinh Nhật",
-      "desc": "Đánh dấu một năm mới với buổi kỷ niệm độc đáo và sống động như bạn."
-    },
-    "privateCelebration": {
-      "title": "Tiệc Riêng Tư",
-      "desc": "Sự kiện đặc biệt cho những khoảnh khắc quan trọng trong cuộc sống, được tạo ra hoàn toàn cho bạn."
+    "yearEndParty": {
+      "title": "Year End Party & Teambuilding",
+      "desc": "Tiệc cuối năm và hoạt động teambuilding gắn kết đội ngũ, tạo năng lượng tích cực cho năm mới."
     }
   },
   "business": {
-    "eyebrow": "Sự Kiện Doanh Nghiệp",
-    "title": "Nơi Kinh Doanh Gặp Gỡ Xuất Sắc",
-    "subtitle": "Nâng tầm sự kiện doanh nghiệp của bạn với không gian tinh tế, công nghệ tiên tiến và dịch vụ hiếu khách vô song.",
-    "galaDinner": {
-      "title": "Dạ Tiệc",
-      "desc": "Những buổi tối xa hoa truyền cảm hứng, tưởng thưởng và để lại ấn tượng lâu dài cho mọi khách."
+    "eyebrow": "Dịch Vụ Của Chúng Tôi",
+    "title": "Giải Pháp Sản Xuất Toàn Diện",
+    "subtitle": "Từ thiết kế booth đến livestream bán hàng và hỗ trợ chiến lược truyền thông — chúng tôi đồng hành cùng thương hiệu từ ý tưởng đến kết quả.",
+    "boothExhibition": {
+      "title": "Booth Triển Lãm & Hội Chợ",
+      "desc": "Thiết kế và thi công booth triển lãm, gian hàng hội chợ theo concept riêng, đúng tiêu chuẩn thẩm mỹ và đúng tiến độ."
     },
-    "conference": {
-      "title": "Hội Nghị",
-      "desc": "Cơ sở vật chất hiện đại cho các cuộc họp chuyên nghiệp hiệu quả và có tác động."
+    "activationBooth": {
+      "title": "Activation Booth",
+      "desc": "Booth activation tương tác thu hút khách hàng, tạo trải nghiệm thương hiệu đáng nhớ tại điểm bán."
     },
-    "brandLaunch": {
-      "title": "Ra Mắt Thương Hiệu",
-      "desc": "Làm cho buổi ra mắt sản phẩm trở nên khó quên với sân khấu kịch tính và trải nghiệm đắm chìm."
+    "stagingProduction": {
+      "title": "Sân Khấu – Backdrop – POSM",
+      "desc": "Thi công sân khấu, backdrop, POSM và trang trí không gian theo concept — cam kết đúng thiết kế, đúng tiến độ."
     },
-    "corporateEvents": {
-      "title": "Sự Kiện Doanh Nghiệp",
-      "desc": "Từ lễ kỷ niệm đội ngũ đến họp cổ đông, chúng tôi xử lý mọi chi tiết với độ chính xác cao."
+    "livestreamStudio": {
+      "title": "Setup Studio & Thiết Bị",
+      "desc": "Setup studio livestream chuyên nghiệp, thiết bị hiện đại, ánh sáng và âm thanh tối ưu cho hình ảnh thương hiệu."
     },
-    "executiveMeeting": {
-      "title": "Họp Điều Hành",
-      "desc": "Không gian phòng họp riêng tư và dịch vụ tùy chỉnh cho những cuộc trò chuyện quan trọng nhất của bạn."
+    "salesLivestream": {
+      "title": "Livestream Bán Hàng",
+      "desc": "Kịch bản bán hàng, host chuyên nghiệp, vận hành livestream và tối ưu quy trình chốt đơn hiệu quả."
+    },
+    "creativeSupport": {
+      "title": "Creative & Strategic Support",
+      "desc": "Xây dựng chiến lược truyền thông, phát triển nội dung social, sản xuất video ngắn và hỗ trợ triển khai chiến dịch marketing."
     }
+  },
+  "services": {
+    "eyebrow": "Dịch Vụ Của Chúng Tôi",
+    "sectionTitle": "Giải Pháp Toàn Diện Cho Thương Hiệu",
+    "sectionSubtitle": "Từ tổ chức sự kiện, thi công booth đến livestream bán hàng và hỗ trợ truyền thông — chúng tôi đồng hành cùng thương hiệu từ ý tưởng đến kết quả.",
+    "event": {
+      "title": "Event & Corporate Experiences",
+      "desc": "Tổ chức sự kiện chuyên nghiệp dành cho doanh nghiệp — xây dựng concept, kịch bản và triển khai trọn gói theo đúng tinh thần thương hiệu.",
+      "items": ["Khai trương & Khởi công", "Lễ động thổ", "Ra mắt sản phẩm", "Hội nghị – Hội thảo", "Year End Party & Teambuilding"]
+    },
+    "booth": {
+      "title": "Booth Design & Event Production",
+      "desc": "Thiết kế và thi công không gian sự kiện — cam kết đúng thiết kế, đúng tiến độ, đúng tiêu chuẩn thẩm mỹ.",
+      "items": ["Booth triển lãm & hội chợ", "Activation booth", "Sân khấu – Backdrop – POSM", "Trang trí theo concept riêng"]
+    },
+    "livestream": {
+      "title": "Livestream & Sales Production",
+      "desc": "Giải pháp livestream tối ưu hình ảnh và chuyển đổi — kết hợp nội dung, kỹ thuật và chiến lược để mang lại hiệu quả thực tế.",
+      "items": ["Setup studio & thiết bị", "Kịch bản bán hàng", "Host & vận hành livestream", "Tối ưu quy trình chốt đơn"]
+    },
+    "creative": {
+      "title": "Creative & Strategic Support",
+      "desc": "Xây dựng chiến lược truyền thông, phát triển nội dung social, sản xuất video ngắn và hỗ trợ triển khai chiến dịch marketing.",
+      "items": ["Chiến lược truyền thông", "Phát triển nội dung social", "Sản xuất video ngắn", "Hỗ trợ chiến dịch marketing"]
+    }
+  },
+  "process": {
+    "eyebrow": "Quy Trình Làm Việc",
+    "sectionTitle": "5 Bước Triển Khai Chuyên Nghiệp",
+    "sectionSubtitle": "Chúng tôi tin rằng sự rõ ràng trong quy trình là nền tảng của sự chuyên nghiệp.",
+    "step1": { "title": "Tiếp Nhận & Tư Vấn", "desc": "Lắng nghe yêu cầu và tư vấn giải pháp phù hợp mục tiêu" },
+    "step2": { "title": "Phân Tích & Đề Xuất", "desc": "Phân tích mục tiêu và đề xuất giải pháp tối ưu cho dự án" },
+    "step3": { "title": "Báo Giá & Ký HĐ", "desc": "Báo giá minh bạch, hợp đồng rõ ràng và điều khoản cụ thể" },
+    "step4": { "title": "Triển Khai & Giám Sát", "desc": "Thực thi chuyên nghiệp, giám sát chặt chẽ toàn bộ tiến độ" },
+    "step5": { "title": "Báo Cáo & Đánh Giá", "desc": "Đánh giá hiệu quả sau dự án và bàn giao báo cáo chi tiết" }
+  },
+  "whyus": {
+    "eyebrow": "Tại Sao Chọn Elevate Media?",
+    "sectionTitle": "5 Lý Do Tin Tưởng Chúng Tôi"
+  },
+  "mission": {
+    "eyebrow": "Tầm Nhìn & Sứ Mệnh",
+    "quote": "Trở thành agency cung cấp giải pháp sự kiện và truyền thông thực chiến, giúp thương hiệu phát triển bền vững và tạo dấu ấn dài lâu trên thị trường."
+  },
+  "stats": {
+    "projects": "Dự Án Hoàn Thành",
+    "clients": "Khách Hàng Tin Tưởng",
+    "years": "Năm Kinh Nghiệm",
+    "satisfaction": "Khách Hàng Hài Lòng"
+  },
+  "why": {
+    "r1": { "title": "Tư Duy Chiến Lược", "desc": "Không làm theo cảm tính — mọi quyết định đều dựa trên mục tiêu rõ ràng và phân tích thực tế." },
+    "r2": { "title": "Thực Thi Chi Tiết", "desc": "Kiểm soát rủi ro tốt — mỗi khâu đều được giám sát kỹ lưỡng để đảm bảo chất lượng đầu ra." },
+    "r3": { "title": "Linh Hoạt Ngân Sách", "desc": "Giải pháp tối ưu cho mọi quy mô doanh nghiệp — từ startup đến tập đoàn lớn." },
+    "r4": { "title": "Cam Kết Đúng Tiến Độ", "desc": "Đúng deadline là nguyên tắc bất biến — chúng tôi không để khách hàng phải chờ đợi." },
+    "r5": { "title": "Tập Trung Hiệu Quả Thực Tế", "desc": "Mọi dự án đều được đo lường bằng kết quả thực tế, không chỉ là hình thức bên ngoài." }
   },
   "philosophy": {
     "eyebrow": "Triết Lý Của Chúng Tôi",
-    "quote": "Chúng tôi không chỉ đơn giản là tổ chức sự kiện. Chúng tôi sáng tác những trải nghiệm vang vọng mãi sau khi vị khách cuối cùng đã ra về.",
-    "author": "— Elevate Media, Người Sáng Lập"
+    "quote": "Chúng tôi tin rằng sự rõ ràng trong quy trình là nền tảng của sự chuyên nghiệp — và hiệu quả thực tế là thước đo duy nhất.",
+    "author": "— Elevate Media"
   },
   "cta": {
-    "title": "Hãy Cùng Tạo Nên Điều Gì Đó Tuyệt Đẹp",
-    "subtitle": "Mọi sự kiện phi thường đều bắt đầu từ một cuộc trò chuyện. Hãy chia sẻ tầm nhìn của bạn, và chúng tôi sẽ biến nó thành hiện thực.",
-    "startPlanning": "Bắt Đầu Lên Kế Hoạch",
-    "viewVenues": "Xem Không Gian"
+    "title": "Sẵn Sàng Nâng Tầm Thương Hiệu?",
+    "subtitle": "Mọi dự án thành công đều bắt đầu từ một cuộc trò chuyện. Hãy chia sẻ ý tưởng, chúng tôi sẽ biến nó thành thực tế.",
+    "startPlanning": "Bắt Đầu Ngay",
+    "viewVenues": "Xem Dịch Vụ"
   },
   "contactInfo": {
-    "title": "Tìm Chúng Tôi",
+    "title": "Liên Hệ Chúng Tôi",
     "phone": {
       "label": "Điện Thoại",
       "value": "+84 236 123 4567"
@@ -103,7 +169,7 @@
     }
   },
   "footer": {
-    "tagline": "Nơi Thiên Nhiên Truyền Cảm Hứng Cho Những Kỷ Niệm Vĩnh Cửu",
+    "tagline": "Nâng Tầm Thương Hiệu Bằng Chiến Lược Và Trải Nghiệm.",
     "quickLinks": "Liên Kết Nhanh",
     "connect": "Kết Nối Với Chúng Tôi",
     "copyright": "© 2025 Elevate Media. Tất cả quyền được bảo lưu.",
@@ -113,97 +179,109 @@
   },
   "brandStory": {
     "hero": {
-      "eyebrow": "Câu Chuyện Của Chúng Tôi",
-      "title": "Sinh Ra Từ Niềm Đam Mê Hoàn Hảo"
+      "eyebrow": "Về Chúng Tôi",
+      "title": "Elevate Media Là Ai?"
     },
     "vision": {
-      "eyebrow": "Tầm Nhìn Của Chúng Tôi",
-      "title": "Định Nghĩa Lại Sự Kiện Sang Trọng Tại Việt Nam",
-      "p1": "Elevate Media được thành lập với một tầm nhìn duy nhất: tạo ra một không gian nơi ranh giới giữa kiến trúc, thiên nhiên và lễ kỷ niệm của con người tan biến hoàn toàn. Từ khi mở cửa năm 2013, chúng tôi đã phát triển từ một không gian sự kiện nhỏ thành điểm đến sự kiện sang trọng được công nhận nhất Việt Nam.",
-      "p2": "Đội ngũ sáng lập của chúng tôi đã dành nhiều năm nghiên cứu những không gian sự kiện vĩ đại nhất thế giới — từ các phòng khách hoành tráng ở Paris đến các sân thượng vườn ở Tuscany — trước khi trở về Việt Nam để tạo ra điều gì đó độc đáo của riêng mình: sự tôn vinh văn hóa và cảnh quan Việt Nam, được nâng lên các tiêu chuẩn quốc tế cao nhất."
+      "eyebrow": "Sứ Mệnh",
+      "title": "Nâng Tầm Thương Hiệu Qua Chiến Lược & Trải Nghiệm",
+      "p1": "Elevate Media được thành lập với sứ mệnh nâng tầm thương hiệu thông qua những trải nghiệm được thiết kế chiến lược và thực thi chuẩn mực.",
+      "p2": "Chúng tôi không chỉ tổ chức sự kiện, mà kiến tạo giải pháp toàn diện từ ý tưởng đến vận hành, đảm bảo mỗi dự án đều đạt được giá trị và hiệu quả tối ưu."
     },
     "architecture": {
-      "eyebrow": "Kiến Trúc & Thiết Kế",
-      "title": "Không Gian Được Thiết Kế Để Truyền Cảm Hứng",
-      "p1": "Mỗi inch của không gian của chúng tôi được thiết kế có chủ đích. Phòng khiêu vũ chính, với trần cao chót vót và cửa sổ từ sàn đến trần, tạo ra bầu không khí hoành tráng vẫn cảm thấy kết nối mật thiết với những khu vườn tươi tốt bên ngoài. Các mô típ Việt Nam được dệt xuyên suốt thiết kế — trong các tấm gỗ chạm khắc bằng tay, các tấm phủ tường bằng lụa, các tác phẩm nghệ thuật được đặt hàng riêng.",
-      "p2": "Chúng tôi đã làm việc với các kiến trúc sư và nhà thiết kế nội thất từng đoạt giải thưởng để tạo ra những không gian cảm thấy vừa vượt thời gian vừa rõ ràng hiện đại — những môi trường khiến mọi sự kiện cảm thấy như thể nó luôn được dự định xảy ra ở đây."
+      "eyebrow": "Tầm Nhìn",
+      "title": "Trở Thành Agency Sự Kiện & Truyền Thông Thực Chiến",
+      "p1": "Trở thành agency cung cấp giải pháp sự kiện và truyền thông thực chiến, giúp thương hiệu phát triển bền vững và tạo dấu ấn dài lâu trên thị trường.",
+      "p2": "Chúng tôi định hướng bởi dữ liệu và kết quả — không bởi cảm tính. Mỗi chiến lược được xây dựng với mục tiêu rõ ràng, mỗi dự án được thực thi với tiêu chuẩn chuyên nghiệp cao nhất."
     },
     "hospitality": {
-      "eyebrow": "Lời Hứa Của Chúng Tôi",
-      "title": "Sự Hiếu Khách Như Một Nghệ Thuật",
-      "p1": "Tại Elevate Media, chúng tôi tin rằng sự hiếu khách không phải là một dịch vụ — đó là một nghệ thuật. Đội ngũ của chúng tôi trải qua đào tạo nghiêm ngặt để nắm vững nghệ thuật tinh tế của việc dự đoán nhu cầu trước khi chúng được bày tỏ, của việc khiến mỗi khách cảm thấy như người quan trọng nhất trong phòng.",
-      "p2": "Triết lý này mở rộng từ các thành viên trẻ nhất của đội ngũ đến các điều phối viên cấp cao nhất. Nó được nhúng vào văn hóa, hệ thống và cam kết không thể lay chuyển về sự xuất sắc của chúng tôi."
+      "eyebrow": "Tại Sao Chọn Chúng Tôi",
+      "title": "5 Lý Do Chọn Elevate Media",
+      "p1": "✔ Tư duy chiến lược – không làm theo cảm tính. ✔ Thực thi chi tiết – kiểm soát rủi ro tốt. ✔ Linh hoạt ngân sách phù hợp mọi quy mô doanh nghiệp.",
+      "p2": "✔ Cam kết đúng tiến độ. ✔ Tập trung vào hiệu quả thực tế và kết quả đo lường được trong từng dự án."
     },
     "emotional": {
-      "eyebrow": "Tạo Ra Kỷ Niệm",
-      "title": "Cảm Xúc Ở Trung Tâm Của Mọi Thứ",
-      "p1": "Đằng sau mỗi đám cưới chúng tôi tổ chức là một câu chuyện tình yêu. Đằng sau mỗi dạ tiệc doanh nghiệp là thành tích của một đội ngũ. Đằng sau mỗi buổi kỷ niệm sinh nhật là một cuộc sống được sống đẹp đẽ. Chúng tôi không bao giờ mất đi nhận thức về cảm xúc con người ở trung tâm của những gì chúng tôi làm.",
-      "p2": "Nhận thức này — rằng chúng tôi là người giữ gìn những khoảnh khắc quý giá nhất của mọi người — là điều thúc đẩy chúng tôi vượt qua mọi kỳ vọng tại mỗi sự kiện. Đó là lý do tại sao khách hàng của chúng tôi quay lại năm này qua năm khác, và tại sao họ tin tưởng chúng tôi với những lễ kỷ niệm quan trọng nhất của họ."
+      "eyebrow": "Triết Lý",
+      "title": "Biến Ý Tưởng Thành Trải Nghiệm. Biến Sự Kiện Thành Dấu Ấn.",
+      "p1": "Biến ý tưởng thành trải nghiệm. Biến sự kiện thành dấu ấn. Biến livestream thành doanh thu.",
+      "p2": "Nhận thức rằng chúng tôi đang nắm giữ những khoảnh khắc quan trọng của thương hiệu bạn — đây là điều thúc đẩy chúng tôi vượt qua mọi kỳ vọng trong từng dự án. Đó là lý do khách hàng tin tưởng và đồng hành cùng Elevate Media."
     }
   },
   "lifestylePage": {
     "hero": {
-      "eyebrow": "Sự Kiện Cá Nhân",
-      "title": "Tạo Nên Những Khoảnh Khắc Kéo Dài Mãi Mãi"
+      "eyebrow": "Sự Kiện & Trải Nghiệm Doanh Nghiệp",
+      "title": "Sự Kiện Thể Hiện Đúng Tinh Thần Thương Hiệu"
     },
     "inquiry": {
-      "title": "Lên Kế Hoạch Sự Kiện",
-      "subtitle": "Hãy chia sẻ tầm nhìn của bạn và chúng tôi sẽ tạo ra điều gì đó phi thường cùng nhau.",
+      "title": "Yêu Cầu Báo Giá",
+      "subtitle": "Hãy chia sẻ yêu cầu và chúng tôi sẽ đề xuất giải pháp tối ưu cho dự án của bạn.",
       "name": "Họ và Tên",
       "email": "Địa Chỉ Email",
       "phone": "Số Điện Thoại",
-      "eventDate": "Ngày Sự Kiện Ưa Thích",
-      "guests": "Số Lượng Khách",
-      "info": "Hãy cho chúng tôi biết về sự kiện của bạn",
-      "newsletter": "Tôi muốn nhận cập nhật và cảm hứng từ Elevate Media",
+      "eventDate": "Ngày Sự Kiện Dự Kiến",
+      "guests": "Quy Mô Sự Kiện (số khách)",
+      "info": "Mô tả về sự kiện / yêu cầu cụ thể",
+      "newsletter": "Tôi muốn nhận cập nhật và thông tin mới từ Elevate Media",
       "submit": "Gửi Yêu Cầu",
-      "success": "Cảm ơn bạn! Yêu cầu của bạn đã được nhận. Đội ngũ của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+      "success": "Cảm ơn bạn! Yêu cầu của bạn đã được nhận. Đội ngũ chúng tôi sẽ liên hệ trong vòng 24 giờ.",
       "error": "Có lỗi xảy ra. Vui lòng thử lại."
     }
   },
   "businessPage": {
     "hero": {
-      "eyebrow": "Sự Kiện Doanh Nghiệp",
-      "title": "Nơi Xuất Sắc Gặp Gỡ Đổi Mới"
+      "eyebrow": "Dịch Vụ Sản Xuất & Truyền Thông",
+      "title": "Booth, Livestream & Hỗ Trợ Chiến Lược"
     },
     "capacity": {
-      "eyebrow": "Sức Chứa Không Gian",
-      "title": "Không Gian Cho Mọi Quy Mô",
-      "mainBallroom": "Phòng Khiêu Vũ Chính",
-      "mainBallroomDesc": "Tối đa 800 khách ngồi / 1.200 đứng",
-      "gardenPavilion": "Nhà Pavilion Vườn",
-      "gardenPavilionDesc": "Tối đa 200 khách ngồi / 350 đứng",
-      "conferenceSuite": "Suite Hội Nghị",
-      "conferenceSuiteDesc": "Tối đa 120 đại biểu, kiểu phòng họp hoặc nhà hát",
-      "privateDining": "Phòng Ăn Tối Riêng Tư",
-      "privateDiningDesc": "Tối đa 50 khách, thân mật và độc quyền"
+      "eyebrow": "Quy Trình Làm Việc",
+      "title": "5 Bước Triển Khai",
+      "mainBallroom": "Tiếp Nhận & Tư Vấn",
+      "mainBallroomDesc": "Lắng nghe yêu cầu và tư vấn giải pháp phù hợp mục tiêu",
+      "gardenPavilion": "Phân Tích & Đề Xuất",
+      "gardenPavilionDesc": "Phân tích mục tiêu, đề xuất giải pháp và phương án tối ưu",
+      "conferenceSuite": "Báo Giá & Ký Hợp Đồng",
+      "conferenceSuiteDesc": "Báo giá minh bạch, hợp đồng rõ ràng và điều khoản cụ thể",
+      "privateDining": "Triển Khai & Báo Cáo",
+      "privateDiningDesc": "Thực thi chuyên nghiệp, giám sát tiến độ và đánh giá hiệu quả sau dự án"
     }
   },
   "blogPage": {
     "hero": {
-      "eyebrow": "Nhật Ký",
-      "title": "Câu Chuyện, Hiểu Biết & Cảm Hứng"
+      "eyebrow": "Blog",
+      "title": "Kiến Thức, Góc Nhìn & Cảm Hứng"
     },
     "all": "Tất Cả",
     "readMore": "Đọc Thêm",
-    "loading": "Đang tải câu chuyện...",
+    "loading": "Đang tải bài viết...",
     "error": "Không thể tải bài viết"
   },
   "blogDetail": {
-    "back": "Trở Về Nhật Ký",
+    "back": "Trở Về Blog",
     "loading": "Đang tải bài viết...",
     "error": "Không tìm thấy bài viết"
   },
   "careersPage": {
     "hero": {
       "eyebrow": "Gia Nhập Đội Ngũ",
-      "title": "Xây Dựng Sự Nghiệp Trong Khách Sạn Sang Trọng"
+      "title": "Xây Dựng Sự Nghiệp Trong Ngành Sự Kiện & Truyền Thông"
     },
     "culture": {
-      "eyebrow": "Cuộc Sống Tại Elevate Media",
+      "eyebrow": "Văn Hóa Tại Elevate Media",
       "title": "Hơn Cả Một Nơi Làm Việc",
-      "p1": "Chúng tôi là một đội ngũ những cá nhân đầy nhiệt huyết tin tưởng vào sức mạnh biến đổi của những trải nghiệm phi thường. Văn hóa của chúng tôi được xây dựng trên sự tôn trọng lẫn nhau, học hỏi liên tục và sự theo đuổi xuất sắc chung.",
-      "p2": "Chúng tôi đầu tư vào con người của mình — thông qua các chương trình đào tạo đẳng cấp thế giới, cơ hội tiếp xúc quốc tế và môi trường làm việc truyền cảm hứng sáng tạo và tham vọng."
+      "p1": "Chúng tôi là đội ngũ những cá nhân đầy nhiệt huyết tin tưởng vào sức mạnh của chiến lược rõ ràng và thực thi chuyên nghiệp. Văn hóa của chúng tôi được xây dựng trên sự tôn trọng lẫn nhau, học hỏi liên tục và theo đuổi hiệu quả thực tế.",
+      "p2": "Chúng tôi đầu tư vào con người — thông qua các dự án thực tế, cơ hội phát triển nghề nghiệp và môi trường làm việc năng động, sáng tạo."
+    },
+    "cultureCards": [
+      { "icon": "🌱", "title": "Phát Triển", "desc": "Cơ hội học hỏi và thăng tiến liên tục qua các dự án thực tế" },
+      { "icon": "🤝", "title": "Hợp Tác", "desc": "Văn hóa làm việc nhóm và tôn trọng lẫn nhau" },
+      { "icon": "✨", "title": "Xuất Sắc", "desc": "Chúng tôi đặt ra và đạt được các tiêu chuẩn cao nhất" },
+      { "icon": "🎯", "title": "Thực Chiến", "desc": "Môi trường năng động, sáng tạo và tập trung kết quả thực tế" }
+    ],
+    "openApp": {
+      "eyebrow": "Không Thấy Vị Trí Phù Hợp?",
+      "title": "Chúng Tôi Luôn Tìm Kiếm Nhân Tài Xuất Sắc",
+      "body": "Nếu bạn tin mình có thể đóng góp cho Elevate Media, chúng tôi rất muốn lắng nghe bạn.",
+      "cta": "Gửi Đơn Tự Nguyện"
     },
     "positions": "Vị Trí Đang Tuyển",
     "applyNow": "Ứng Tuyển Ngay",
@@ -216,6 +294,7 @@
       "message": "Thư Xin Việc / Tin Nhắn",
       "submit": "Gửi Đơn Ứng Tuyển",
       "cancel": "Hủy",
+      "close": "Đóng",
       "success": "Đơn ứng tuyển của bạn đã được nhận. Chúng tôi sẽ xem xét và liên hệ lại.",
       "error": "Có lỗi xảy ra. Vui lòng thử lại."
     }
@@ -223,7 +302,7 @@
   "contactPage": {
     "hero": {
       "eyebrow": "Liên Hệ Chúng Tôi",
-      "title": "Bắt Đầu Hành Trình Sự Kiện Của Bạn"
+      "title": "Bắt Đầu Dự Án Của Bạn"
     },
     "form": {
       "title": "Gửi Tin Nhắn Cho Chúng Tôi",
@@ -232,13 +311,13 @@
       "phone": "Số Điện Thoại",
       "message": "Tin Nhắn",
       "eventDate": "Ngày Sự Kiện (nếu có)",
-      "attendees": "Số Lượng Người Tham Dự",
+      "attendees": "Quy Mô Sự Kiện",
       "submit": "Gửi Tin Nhắn",
-      "success": "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ liên lạc trong vòng 24 giờ.",
+      "success": "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
       "error": "Có lỗi xảy ra. Vui lòng thử lại."
     },
     "info": {
-      "title": "Ghé Thăm Chúng Tôi",
+      "title": "Liên Hệ Với Chúng Tôi",
       "phone": "+84 236 123 4567",
       "email": "info@elevatemedia.vn",
       "address": "123 Đường Trần Phú\nQuận Hải Châu\nĐà Nẵng, Việt Nam",
