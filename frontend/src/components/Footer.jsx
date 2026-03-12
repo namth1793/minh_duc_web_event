@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="space-y-3">
               <p className="font-sans text-sm text-gray-400">
                 <span className="block text-white text-xs mb-0.5">Phone</span>
-                +84 236 123 4567
+                0333 271 625
               </p>
               <p className="font-sans text-sm text-gray-400">
                 <span className="block text-white text-xs mb-0.5">Email</span>
@@ -72,8 +72,8 @@ export default function Footer() {
               </p>
               <p className="font-sans text-sm text-gray-400">
                 <span className="block text-white text-xs mb-0.5">Address</span>
-                123 Trần Phú, Hải Châu<br />
-                Đà Nẵng, Vietnam
+                51M Phan Tây Hồ, Phú Nhuận<br />
+                TP. Hồ Chí Minh, Vietnam
               </p>
               <p className="font-sans text-sm text-gray-400">
                 <span className="block text-white text-xs mb-0.5">Hours</span>
@@ -143,7 +143,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="font-sans text-xs text-gray-600">
-            Crafted with care in Đà Nẵng, Vietnam
+            Crafted with care in TP. Hồ Chí Minh, Vietnam
           </p>
         </div>
       </div>

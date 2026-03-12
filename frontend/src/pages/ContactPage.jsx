@@ -303,10 +303,10 @@ export default function ContactPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+842361234567"
+                href="tel:+840333271625"
                 className="btn-primary text-center"
               >
-                Call +84 236 123 4567
+                Call 0333 271 625
               </a>
               <a
                 href="mailto:events@minhduc.vn"
