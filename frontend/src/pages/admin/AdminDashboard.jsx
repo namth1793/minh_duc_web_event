@@ -44,7 +44,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', fontFamily: 'Inter, sans-serif' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', fontFamily: 'Montserrat, sans-serif' }}>
       {/* Sidebar */}
       <aside
         style={{
@@ -109,7 +109,7 @@ export default function AdminDashboard() {
                   borderRadius: 4,
                   color: isActive ? '#C9A96E' : '#888',
                   fontSize: 13,
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'Montserrat, sans-serif',
                   fontWeight: isActive ? 500 : 400,
                   cursor: 'pointer',
                   textAlign: 'left',
@@ -152,7 +152,7 @@ export default function AdminDashboard() {
               borderRadius: 4,
               color: '#666',
               fontSize: 12,
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Montserrat, sans-serif',
               cursor: 'pointer',
               letterSpacing: '0.05em',
               transition: 'all 0.15s',

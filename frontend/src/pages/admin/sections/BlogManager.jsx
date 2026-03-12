@@ -45,7 +45,7 @@ function FormModal({ post, onSave, onCancel, loading }) {
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd',
     borderRadius: 4, padding: '8px 12px', fontSize: 13,
-    fontFamily: 'Inter, sans-serif', boxSizing: 'border-box',
+    fontFamily: 'Montserrat, sans-serif', boxSizing: 'border-box',
     outline: 'none', color: '#111',
   };
   const labelStyle = {
@@ -234,7 +234,7 @@ export default function BlogManager() {
           onClick={() => { setModalPost(null); setShowModal(true); }}
           style={{
             padding: '9px 20px', background: '#111', border: 'none', borderRadius: 4,
-            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Montserrat, sans-serif',
             display: 'flex', alignItems: 'center', gap: 6,
           }}
         >

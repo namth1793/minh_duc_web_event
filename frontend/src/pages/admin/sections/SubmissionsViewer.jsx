@@ -79,7 +79,7 @@ function MessageCell({ text }) {
           onClick={() => setExpanded(e => !e)}
           style={{
             background: 'none', border: 'none', color: '#C9A96E', fontSize: 11,
-            cursor: 'pointer', padding: '2px 0', fontFamily: 'Inter, sans-serif',
+            cursor: 'pointer', padding: '2px 0', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           {expanded ? 'Thu gọn' : 'Xem thêm'}
@@ -131,7 +131,7 @@ export default function SubmissionsViewer() {
     color: tab === key ? '#fff' : '#555',
     border: '1px solid', borderColor: tab === key ? '#111' : '#e5e5e5',
     borderRadius: 4, cursor: 'pointer', fontSize: 13,
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Montserrat, sans-serif',
     fontWeight: tab === key ? 600 : 400,
     display: 'flex', alignItems: 'center', gap: 8,
   });

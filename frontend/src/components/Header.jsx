@@ -82,7 +82,7 @@ export default function Header() {
   };
 
   const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'vi' : 'en');
+    i18n.changeLanguage(i18n.language === 'vi' ? 'en' : 'vi');
   };
 
   const headerBg = scrolled || !isHome
@@ -138,9 +138,9 @@ export default function Header() {
               onClick={toggleLang}
               className={`font-sans text-xs tracking-widest uppercase transition-colors duration-300 flex items-center gap-1 ${textColor} hover:text-gold`}
             >
-              <span className={i18n.language === 'en' ? 'text-gold font-semibold' : 'opacity-50'}>EN</span>
-              <span className="opacity-30">|</span>
               <span className={i18n.language === 'vi' ? 'text-gold font-semibold' : 'opacity-50'}>VI</span>
+              <span className="opacity-30">|</span>
+              <span className={i18n.language === 'en' ? 'text-gold font-semibold' : 'opacity-50'}>EN</span>
             </button>
 
             {/* Mobile hamburger */}

@@ -77,7 +77,7 @@ function MessageCell({ text }) {
           onClick={() => setExpanded(e => !e)}
           style={{
             background: 'none', border: 'none', color: '#C9A96E', fontSize: 11,
-            cursor: 'pointer', padding: '2px 0', fontFamily: 'Inter, sans-serif',
+            cursor: 'pointer', padding: '2px 0', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           {expanded ? 'Thu gọn' : 'Xem thêm'}
@@ -121,7 +121,7 @@ function FormModal({ job, onSave, onCancel, loading }) {
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd',
     borderRadius: 4, padding: '8px 12px', fontSize: 13,
-    fontFamily: 'Inter, sans-serif', boxSizing: 'border-box', outline: 'none', color: '#111',
+    fontFamily: 'Montserrat, sans-serif', boxSizing: 'border-box', outline: 'none', color: '#111',
   };
   const labelStyle = {
     display: 'block', fontSize: 11, fontWeight: 600,
@@ -282,7 +282,7 @@ function JobsTab() {
           onClick={() => { setModalJob(null); setShowModal(true); }}
           style={{
             padding: '9px 20px', background: '#111', border: 'none', borderRadius: 4,
-            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           + Thêm Mới
@@ -461,14 +461,14 @@ export default function CareersManager() {
       borderRadius: 4,
       cursor: 'pointer',
       fontSize: 13,
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Montserrat, sans-serif',
       fontWeight: isActive ? 600 : 400,
       transition: 'all 0.15s',
     };
   }
 
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div style={{ fontFamily: 'Montserrat, sans-serif' }}>
       <div style={{ marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Tuyển Dụng</h3>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>

@@ -170,7 +170,7 @@ export default function ContentManager() {
     borderRadius: 4,
     cursor: 'pointer',
     fontSize: 12,
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Montserrat, sans-serif',
     fontWeight: activePage === key ? 600 : 400,
     transition: 'all 0.15s',
     whiteSpace: 'nowrap',

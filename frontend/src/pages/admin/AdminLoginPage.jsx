@@ -57,7 +57,7 @@ export default function AdminLoginPage() {
           />
           <h1
             style={{
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Montserrat, sans-serif',
               fontSize: 11,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
             <label
               style={{
                 display: 'block',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontSize: 11,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
@@ -98,7 +98,7 @@ export default function AdminLoginPage() {
                 borderRadius: 1,
                 padding: '10px 14px',
                 color: '#fff',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontSize: 14,
                 outline: 'none',
                 boxSizing: 'border-box',
@@ -113,7 +113,7 @@ export default function AdminLoginPage() {
             <label
               style={{
                 display: 'block',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontSize: 11,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
@@ -135,7 +135,7 @@ export default function AdminLoginPage() {
                 borderRadius: 1,
                 padding: '10px 14px',
                 color: '#fff',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontSize: 14,
                 outline: 'none',
                 boxSizing: 'border-box',
@@ -154,7 +154,7 @@ export default function AdminLoginPage() {
                 borderRadius: 1,
                 padding: '10px 14px',
                 color: '#f87171',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontSize: 13,
                 marginBottom: 20,
               }}
@@ -173,7 +173,7 @@ export default function AdminLoginPage() {
               border: 'none',
               borderRadius: 1,
               padding: '12px',
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Montserrat, sans-serif',
               fontSize: 11,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
@@ -191,7 +191,7 @@ export default function AdminLoginPage() {
           <Link
             to="/"
             style={{
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Montserrat, sans-serif',
               fontSize: 11,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',

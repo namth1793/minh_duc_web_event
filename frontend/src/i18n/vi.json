@@ -153,7 +153,7 @@
     "title": "Liên Hệ Chúng Tôi",
     "phone": {
       "label": "Điện Thoại",
-      "value": "+84 236 123 4567"
+      "value": "0333 271 625"
     },
     "email": {
       "label": "Email",
@@ -161,7 +161,7 @@
     },
     "address": {
       "label": "Địa Chỉ",
-      "value": "123 Trần Phú, Hải Châu, Đà Nẵng"
+      "value": "51M Phan Tây Hồ, Phú Nhuận"
     },
     "hours": {
       "label": "Giờ Hoạt Động",
@@ -318,9 +318,9 @@
     },
     "info": {
       "title": "Liên Hệ Với Chúng Tôi",
-      "phone": "+84 236 123 4567",
+      "phone": "0333 271 625",
       "email": "info@elevatemedia.vn",
-      "address": "123 Đường Trần Phú\nQuận Hải Châu\nĐà Nẵng, Việt Nam",
+      "address": "51M Phan Tây Hồ\nPhú Nhuận\nTP. Hồ Chí Minh, Việt Nam",
       "hours": "Thứ Hai – Chủ Nhật\n8:00 SA – 9:00 CH"
     }
   }

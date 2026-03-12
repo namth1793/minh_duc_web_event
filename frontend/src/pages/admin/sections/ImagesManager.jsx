@@ -62,7 +62,7 @@ function AddImageForm({ page, sections, onAdd, onCancel }) {
 
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd', borderRadius: 4,
-    padding: '8px 12px', fontSize: 13, fontFamily: 'Inter, sans-serif',
+    padding: '8px 12px', fontSize: 13, fontFamily: 'Montserrat, sans-serif',
     boxSizing: 'border-box', outline: 'none', color: '#111',
   };
   const labelStyle = {
@@ -163,7 +163,7 @@ function EditImageModal({ image, sections, onSave, onCancel }) {
 
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd', borderRadius: 4,
-    padding: '8px 12px', fontSize: 13, fontFamily: 'Inter, sans-serif',
+    padding: '8px 12px', fontSize: 13, fontFamily: 'Montserrat, sans-serif',
     boxSizing: 'border-box', outline: 'none', color: '#111',
   };
   const labelStyle = {
@@ -300,7 +300,7 @@ export default function ImagesManager() {
     color: activePage === key ? '#fff' : '#555',
     border: '1px solid', borderColor: activePage === key ? '#111' : '#e5e5e5',
     borderRadius: 4, cursor: 'pointer', fontSize: 12,
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Montserrat, sans-serif',
     fontWeight: activePage === key ? 600 : 400,
     whiteSpace: 'nowrap',
   });
@@ -318,7 +318,7 @@ export default function ImagesManager() {
           onClick={() => setShowAdd(true)}
           style={{
             padding: '9px 20px', background: '#111', border: 'none', borderRadius: 4,
-            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           + Thêm Hình Ảnh

@@ -79,7 +79,7 @@ function MessageCell({ text }) {
           onClick={() => setExpanded(e => !e)}
           style={{
             background: 'none', border: 'none', color: '#C9A96E', fontSize: 11,
-            cursor: 'pointer', padding: '2px 0', fontFamily: 'Inter, sans-serif',
+            cursor: 'pointer', padding: '2px 0', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           {expanded ? 'Thu gọn' : 'Xem thêm'}
@@ -211,14 +211,14 @@ export default function ContactManager() {
       borderRadius: 4,
       cursor: 'pointer',
       fontSize: 13,
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Montserrat, sans-serif',
       fontWeight: isActive ? 600 : 400,
       transition: 'all 0.15s',
     };
   }
 
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div style={{ fontFamily: 'Montserrat, sans-serif' }}>
       <div style={{ marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Liên Hệ</h3>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>

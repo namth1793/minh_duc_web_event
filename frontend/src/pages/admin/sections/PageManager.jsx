@@ -145,7 +145,7 @@ function ImageAddModal({ pageKey, imageSections, onAdd, onCancel }) {
 
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd', borderRadius: 4,
-    padding: '8px 12px', fontSize: 13, fontFamily: 'Inter, sans-serif',
+    padding: '8px 12px', fontSize: 13, fontFamily: 'Montserrat, sans-serif',
     boxSizing: 'border-box', outline: 'none', color: '#111',
   };
   const labelStyle = {
@@ -243,7 +243,7 @@ function ImageEditModal({ image, imageSections, onSave, onCancel }) {
 
   const inputStyle = {
     width: '100%', background: '#fafafa', border: '1px solid #ddd', borderRadius: 4,
-    padding: '8px 12px', fontSize: 13, fontFamily: 'Inter, sans-serif',
+    padding: '8px 12px', fontSize: 13, fontFamily: 'Montserrat, sans-serif',
     boxSizing: 'border-box', outline: 'none', color: '#111',
   };
   const labelStyle = {
@@ -430,7 +430,7 @@ function ImagesTab({ pageKey, imageSections }) {
           onClick={() => setShowAdd(true)}
           style={{
             padding: '9px 20px', background: '#111', border: 'none', borderRadius: 4,
-            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+            color: '#fff', fontSize: 13, cursor: 'pointer', fontFamily: 'Montserrat, sans-serif',
           }}
         >
           + Thêm Hình Ảnh
@@ -571,14 +571,14 @@ export default function PageManager({ pageKey, contentSections, imageSections, t
       borderRadius: 4,
       cursor: 'pointer',
       fontSize: 13,
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Montserrat, sans-serif',
       fontWeight: isActive ? 600 : 400,
       transition: 'all 0.15s',
     };
   }
 
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div style={{ fontFamily: 'Montserrat, sans-serif' }}>
       <div style={{ marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>{title}</h3>
         {description && (

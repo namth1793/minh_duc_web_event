@@ -348,7 +348,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-6 gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -358,7 +358,7 @@ export default function HomePage() {
               <motion.div
                 key={idx}
                 variants={fadeUp}
-                className="bg-white p-8 border border-cream-dark hover:border-gold transition-all duration-300 flex gap-5"
+                className={`md:col-span-2 bg-white p-8 border border-cream-dark hover:border-gold transition-all duration-300 flex gap-5${idx === 3 ? ' md:col-start-2' : ''}${idx === 4 ? ' md:col-start-4' : ''}`}
               >
                 <div className="flex-shrink-0 w-8 h-8 bg-gold/10 border border-gold/30 flex items-center justify-center">
                   <span className="text-gold font-serif text-lg">✔</span>
