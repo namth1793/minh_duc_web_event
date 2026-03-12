@@ -17,7 +17,7 @@ export default {
         'warm-light': '#B5A08A',
       },
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        serif: ['Montserrat', 'system-ui', 'sans-serif'],
         sans: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
