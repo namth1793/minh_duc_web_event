@@ -18,7 +18,7 @@
   },
   "about": {
     "eyebrow": "Chào Mừng Đến Elevate Media",
-    "title": "From Idea To Impact",
+    "title": "ý tưởng đến hành động",
     "tagline": "Nâng tầm thương hiệu bằng chiến lược và trải nghiệm.",
     "tagline1": "Biến ý tưởng thành trải nghiệm.",
     "tagline2": "Biến sự kiện thành dấu ấn.",
@@ -87,22 +87,22 @@
     "sectionTitle": "Giải Pháp Toàn Diện Cho Thương Hiệu",
     "sectionSubtitle": "Từ tổ chức sự kiện, thi công booth đến livestream bán hàng và hỗ trợ truyền thông — chúng tôi đồng hành cùng thương hiệu từ ý tưởng đến kết quả.",
     "event": {
-      "title": "Event & Corporate Experiences",
+      "title": "Trải nghiệm sự kiện & doanh nghiệp",
       "desc": "Tổ chức sự kiện chuyên nghiệp dành cho doanh nghiệp — xây dựng concept, kịch bản và triển khai trọn gói theo đúng tinh thần thương hiệu.",
       "items": ["Khai trương & Khởi công", "Lễ động thổ", "Ra mắt sản phẩm", "Hội nghị – Hội thảo", "Year End Party & Teambuilding"]
     },
     "booth": {
-      "title": "Booth Design & Event Production",
+      "title": "Thiết kế gian hàng & Sản xuất sự kiện",
       "desc": "Thiết kế và thi công không gian sự kiện — cam kết đúng thiết kế, đúng tiến độ, đúng tiêu chuẩn thẩm mỹ.",
       "items": ["Booth triển lãm & hội chợ", "Activation booth", "Sân khấu – Backdrop – POSM", "Trang trí theo concept riêng"]
     },
     "livestream": {
-      "title": "Livestream & Sales Production",
+      "title": "chương trình phát trực tiếp và bán hàng",
       "desc": "Giải pháp livestream tối ưu hình ảnh và chuyển đổi — kết hợp nội dung, kỹ thuật và chiến lược để mang lại hiệu quả thực tế.",
       "items": ["Setup studio & thiết bị", "Kịch bản bán hàng", "Host & vận hành livestream", "Tối ưu quy trình chốt đơn"]
     },
     "creative": {
-      "title": "Creative & Strategic Support",
+      "title": "Hỗ trợ sáng tạo và chiến lược",
       "desc": "Xây dựng chiến lược truyền thông, phát triển nội dung social, sản xuất video ngắn và hỗ trợ triển khai chiến dịch marketing.",
       "items": ["Chiến lược truyền thông", "Phát triển nội dung social", "Sản xuất video ngắn", "Hỗ trợ chiến dịch marketing"]
     }
