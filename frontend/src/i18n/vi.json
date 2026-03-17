@@ -111,11 +111,11 @@
     "eyebrow": "Quy Trình Làm Việc",
     "sectionTitle": "5 Bước Triển Khai Chuyên Nghiệp",
     "sectionSubtitle": "Chúng tôi tin rằng sự rõ ràng trong quy trình là nền tảng của sự chuyên nghiệp.",
-    "step1": { "title": "Tiếp Nhận & Tư Vấn", "desc": "Lắng nghe yêu cầu và tư vấn giải pháp phù hợp mục tiêu" },
-    "step2": { "title": "Phân Tích & Đề Xuất", "desc": "Phân tích mục tiêu và đề xuất giải pháp tối ưu cho dự án" },
-    "step3": { "title": "Báo Giá & Ký HĐ", "desc": "Báo giá minh bạch, hợp đồng rõ ràng và điều khoản cụ thể" },
-    "step4": { "title": "Triển Khai & Giám Sát", "desc": "Thực thi chuyên nghiệp, giám sát chặt chẽ toàn bộ tiến độ" },
-    "step5": { "title": "Báo Cáo & Đánh Giá", "desc": "Đánh giá hiệu quả sau dự án và bàn giao báo cáo chi tiết" }
+    "step1": { "title": "Tiếp Nhận", "desc": "Lắng nghe yêu cầu và tư vấn giải pháp phù hợp mục tiêu" },
+    "step2": { "title": "Phân Tích", "desc": "Phân tích mục tiêu và đề xuất giải pháp tối ưu cho dự án" },
+    "step3": { "title": "Báo Giá", "desc": "Báo giá minh bạch, hợp đồng rõ ràng và điều khoản cụ thể" },
+    "step4": { "title": "Triển Khai", "desc": "Thực thi chuyên nghiệp, giám sát chặt chẽ toàn bộ tiến độ" },
+    "step5": { "title": "Báo Cáo", "desc": "Đánh giá hiệu quả sau dự án và bàn giao báo cáo chi tiết" }
   },
   "whyus": {
     "eyebrow": "Tại Sao Chọn Elevate Media?",
@@ -135,8 +135,8 @@
     "r1": { "title": "Tư Duy Chiến Lược", "desc": "Không làm theo cảm tính — mọi quyết định đều dựa trên mục tiêu rõ ràng và phân tích thực tế." },
     "r2": { "title": "Thực Thi Chi Tiết", "desc": "Kiểm soát rủi ro tốt — mỗi khâu đều được giám sát kỹ lưỡng để đảm bảo chất lượng đầu ra." },
     "r3": { "title": "Linh Hoạt Ngân Sách", "desc": "Giải pháp tối ưu cho mọi quy mô doanh nghiệp — từ startup đến tập đoàn lớn." },
-    "r4": { "title": "Cam Kết Đúng Tiến Độ", "desc": "Đúng deadline là nguyên tắc bất biến — chúng tôi không để khách hàng phải chờ đợi." },
-    "r5": { "title": "Tập Trung Hiệu Quả Thực Tế", "desc": "Mọi dự án đều được đo lường bằng kết quả thực tế, không chỉ là hình thức bên ngoài." }
+    "r4": { "title": "Cam Kết Tiến Độ", "desc": "Đúng deadline là nguyên tắc bất biến — chúng tôi không để khách hàng phải chờ đợi." },
+    "r5": { "title": "Tập Trung Hiệu Quả", "desc": "Mọi dự án đều được đo lường bằng kết quả thực tế, không chỉ là hình thức bên ngoài." }
   },
   "philosophy": {
     "eyebrow": "Triết Lý Của Chúng Tôi",

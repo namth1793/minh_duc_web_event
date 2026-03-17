@@ -111,11 +111,11 @@
     "eyebrow": "Working Process",
     "sectionTitle": "5 Steps to Professional Execution",
     "sectionSubtitle": "We believe clarity in process is the foundation of professionalism.",
-    "step1": { "title": "Receive & Consult", "desc": "Listen to requirements and provide professional consultation aligned with your goals" },
-    "step2": { "title": "Analyze & Propose", "desc": "Analyze objectives and propose the optimal tailored solution for your project" },
-    "step3": { "title": "Quote & Contract", "desc": "Transparent pricing, clear contract terms, and specific deliverables defined" },
-    "step4": { "title": "Execute & Monitor", "desc": "Professional execution with tight monitoring of all milestones and quality" },
-    "step5": { "title": "Report & Evaluate", "desc": "Post-project performance evaluation and detailed reporting delivered to client" }
+    "step1": { "title": "Receive", "desc": "Listen to requirements and provide professional consultation aligned with your goals" },
+    "step2": { "title": "Analyze", "desc": "Analyze objectives and propose the optimal tailored solution for your project" },
+    "step3": { "title": "Quote", "desc": "Transparent pricing, clear contract terms, and specific deliverables defined" },
+    "step4": { "title": "Execute", "desc": "Professional execution with tight monitoring of all milestones and quality" },
+    "step5": { "title": "Report", "desc": "Post-project performance evaluation and detailed reporting delivered to client" }
   },
   "whyus": {
     "eyebrow": "Why Choose Elevate Media?",
