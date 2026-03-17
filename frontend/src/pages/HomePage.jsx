@@ -112,7 +112,7 @@ export default function HomePage() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-4"
+            className="font-serif text-5xl md:text-6xl lg:text-6xl font-light leading-tight mb-4 whitespace-pre-line"
           >
             {t('hero.tagline')}
           </motion.h1>
