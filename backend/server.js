@@ -29,6 +29,7 @@ const blogRoutes = require('./routes/blog');
 const careerRoutes = require('./routes/careers');
 const contactRoutes = require('./routes/contact');
 const adminRoutes = require('./routes/admin');
+const contentRoutes = require('./routes/content');
 
 // Serve uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -37,6 +38,7 @@ app.use('/api/blog', blogRoutes);
 app.use('/api/careers', careerRoutes);
 app.use('/api', contactRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/content', contentRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Elevate Media API running' });

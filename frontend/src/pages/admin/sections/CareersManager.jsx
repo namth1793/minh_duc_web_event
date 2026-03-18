@@ -442,6 +442,51 @@ function ApplicationsTab() {
   );
 }
 
+function GuideBox() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, marginBottom: 20 }}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Montserrat, sans-serif' }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ background: '#16a34a', color: '#fff', fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 20 }}>● LIVE</span>
+          <span style={{ fontSize: 13, fontWeight: 600, color: '#15803d' }}>📖 Hướng dẫn — Quản lý Tuyển Dụng</span>
+        </div>
+        <span style={{ fontSize: 11, color: '#6b7280', transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>▼</span>
+      </button>
+      {open && (
+        <div style={{ padding: '0 16px 16px', borderTop: '1px solid #bbf7d0' }}>
+          <p style={{ fontSize: 13, color: '#166534', margin: '12px 0 8px' }}>
+            Tin tuyển dụng thêm/sửa/xóa sẽ <strong>cập nhật ngay trên trang /careers</strong> của website.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#15803d', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tab: Tin Tuyển Dụng</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li><strong>Tiêu đề</strong>: nhập cả EN và VI</li>
+                <li><strong>Phòng ban</strong>: vd. "Event Team" / "Đội Sự Kiện"</li>
+                <li><strong>Loại hình</strong>: Full-time, Part-time, Internship...</li>
+                <li><strong>Mô tả</strong>: yêu cầu công việc, quyền lợi</li>
+              </ul>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#15803d', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tab: Đơn Ứng Tuyển</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li>Xem danh sách đơn từ ứng viên</li>
+                <li>Thông tin: họ tên, email, SĐT, vị trí, thư xin việc</li>
+                <li>Dữ liệu chỉ xem (không thể xóa)</li>
+                <li>Liên hệ ứng viên qua email/SĐT hiển thị</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function CareersManager() {
   const [activeTab, setActiveTab] = useState('jobs');
 
@@ -469,6 +514,7 @@ export default function CareersManager() {
 
   return (
     <div style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <GuideBox />
       <div style={{ marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Tuyển Dụng</h3>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>

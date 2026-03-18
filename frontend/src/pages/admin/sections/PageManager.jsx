@@ -22,6 +22,84 @@ function Toast({ message, type, onClose }) {
   );
 }
 
+const SECTION_HINTS = {
+  hero: {
+    label: 'Banner đầu trang',
+    hint: 'Tiêu đề và phụ đề hiển thị trên ảnh nền hero',
+    format: '{"title": "Tiêu đề lớn", "subtitle": "Phụ đề nhỏ phía dưới"}',
+  },
+  description: {
+    label: 'Mô tả dịch vụ',
+    hint: 'Đoạn văn giới thiệu dịch vụ, hiển thị phía dưới hero',
+    format: 'Nhập văn bản thuần (không cần JSON)',
+  },
+  features: {
+    label: 'Danh sách tính năng',
+    hint: 'Các tính năng/điểm mạnh của dịch vụ, hiển thị dạng bullet list',
+    format: '{"items": ["Tính năng 1", "Tính năng 2", "Tính năng 3"]}',
+  },
+  cta: {
+    label: 'Kêu gọi hành động (CTA)',
+    hint: 'Nút và tiêu đề kêu gọi khách hàng liên hệ ở cuối trang',
+    format: '{"title": "Sẵn sàng bắt đầu?", "subtitle": "Mô tả ngắn", "button": "Liên Hệ Ngay"}',
+  },
+  vision: {
+    label: 'Tầm nhìn',
+    hint: 'Section tầm nhìn công ty',
+    format: '{"title": "Tiêu đề", "p1": "Đoạn 1", "p2": "Đoạn 2"}',
+  },
+  architecture: {
+    label: 'Kiến trúc / Mục tiêu',
+    hint: 'Section mô tả định hướng, chiến lược',
+    format: '{"title": "Tiêu đề", "p1": "Đoạn 1", "p2": "Đoạn 2"}',
+  },
+  hospitality: {
+    label: 'Lý do chọn chúng tôi',
+    hint: 'Section giải thích tại sao chọn Elevate Media',
+    format: '{"title": "Tiêu đề", "p1": "Nội dung 1", "p2": "Nội dung 2"}',
+  },
+  emotional: {
+    label: 'Triết lý / Cảm hứng',
+    hint: 'Đoạn kết thúc cảm xúc, thương hiệu',
+    format: '{"title": "Tiêu đề", "p1": "Đoạn 1", "p2": "Đoạn 2"}',
+  },
+  events: {
+    label: 'Danh sách loại sự kiện',
+    hint: 'Các loại sự kiện hiển thị trên trang Lifestyle Events',
+    format: 'Nhập văn bản hoặc JSON tuỳ cấu trúc trang',
+  },
+  inquiry: {
+    label: 'Form yêu cầu báo giá',
+    hint: 'Tiêu đề và mô tả của form yêu cầu sự kiện',
+    format: '{"title": "Tiêu đề form", "subtitle": "Mô tả ngắn"}',
+  },
+  capacity: {
+    label: 'Sức chứa / Quy trình',
+    hint: 'Thông tin quy trình làm việc hoặc sức chứa',
+    format: '{"title": "Tiêu đề", "items": [...]}',
+  },
+  culture: {
+    label: 'Văn hoá công ty',
+    hint: 'Mô tả văn hoá làm việc tại Elevate Media',
+    format: '{"title": "Tiêu đề", "p1": "Đoạn 1", "p2": "Đoạn 2"}',
+  },
+  'open-application': {
+    label: 'Đơn tự nguyện',
+    hint: 'Section khuyến khích ứng viên gửi đơn tự nguyện',
+    format: '{"title": "Tiêu đề", "body": "Mô tả", "cta": "Text nút"}',
+  },
+  info: {
+    label: 'Thông tin liên hệ',
+    hint: 'Địa chỉ, email, SĐT, giờ làm việc hiển thị trang contact',
+    format: '{"phone": "0333...", "email": "...", "address": "...", "hours": "..."}',
+  },
+  form: {
+    label: 'Tiêu đề form liên hệ',
+    hint: 'Tiêu đề và mô tả của form gửi tin nhắn',
+    format: '{"title": "Tiêu đề", "subtitle": "Mô tả"}',
+  },
+};
+
 function SectionEditor({ pageKey, section, initialData }) {
   const { authHeader } = useAdmin();
   const [content_en, setContentEn] = useState(initialData?.content_en || '');
@@ -61,59 +139,79 @@ function SectionEditor({ pageKey, section, initialData }) {
     color: '#111', height: 100, resize: 'vertical',
   };
 
+  const hint = SECTION_HINTS[section];
+
   return (
     <div style={{
-      background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6,
-      padding: '16px 20px', marginBottom: 12,
+      background: '#fff', border: '1px solid #e4e4e7', borderRadius: 8,
+      overflow: 'hidden', marginBottom: 12, boxShadow: '0 1px 3px rgba(0,0,0,0.04)',
     }}>
+      {/* Section header */}
       <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12,
+        display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+        padding: '14px 18px', background: '#fafafa', borderBottom: '1px solid #e4e4e7',
       }}>
         <div>
-          <span style={{
-            fontSize: 11, fontWeight: 600, color: '#111', letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-          }}>{section}</span>
-          <span style={{ fontSize: 11, color: '#aaa', marginLeft: 8 }}>
-            {pageKey} / {section}
-          </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
+            <span style={{ fontSize: 12, fontWeight: 700, color: '#111', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              {hint?.label || section}
+            </span>
+            <span style={{ fontSize: 10, color: '#9ca3af', background: '#f3f4f6', padding: '1px 6px', borderRadius: 4 }}>
+              {section}
+            </span>
+          </div>
+          {hint && (
+            <p style={{ fontSize: 12, color: '#6b7280', margin: 0 }}>{hint.hint}</p>
+          )}
         </div>
         <button
           onClick={handleSave}
           disabled={saving}
           style={{
-            padding: '5px 16px',
-            background: error ? '#7f1d1d' : saved ? '#065f46' : saving ? '#888' : '#C9A96E',
-            border: 'none', borderRadius: 3, fontSize: 12,
+            padding: '6px 18px', flexShrink: 0, marginLeft: 12,
+            background: error ? '#dc2626' : saved ? '#16a34a' : saving ? '#9ca3af' : '#C9A96E',
+            border: 'none', borderRadius: 6, fontSize: 12,
             cursor: saving ? 'not-allowed' : 'pointer',
-            color: (saved || error) ? '#fff' : '#111', fontWeight: 500,
+            color: (saved || error) ? '#fff' : '#111', fontWeight: 600,
             transition: 'background 0.2s',
           }}
         >
-          {error ? '✕ Lỗi' : saved ? '✓ Đã lưu' : saving ? 'Đang lưu...' : 'Lưu'}
+          {error ? '✕ Lỗi' : saved ? '✓ Đã lưu' : saving ? 'Đang lưu...' : '💾 Lưu'}
         </button>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        <div>
-          <label style={{ fontSize: 10, color: '#888', display: 'block', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-            Nội dung EN (JSON hoặc văn bản)
+
+      {/* Format hint */}
+      {hint?.format && (
+        <div style={{ padding: '8px 18px', background: '#fffbeb', borderBottom: '1px solid #fef3c7' }}>
+          <span style={{ fontSize: 11, color: '#92400e' }}>
+            <strong>Format:</strong>{' '}
+            <code style={{ background: '#fef3c7', padding: '1px 6px', borderRadius: 3, fontSize: 11 }}>{hint.format}</code>
+          </span>
+        </div>
+      )}
+
+      {/* Editors */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0 }}>
+        <div style={{ padding: '14px 18px', borderRight: '1px solid #e4e4e7' }}>
+          <label style={{ fontSize: 10, color: '#6b7280', display: 'block', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+            🇬🇧 Tiếng Anh (EN)
           </label>
           <textarea
-            style={textareaStyle}
+            style={{ ...textareaStyle, height: 110 }}
             value={content_en}
             onChange={e => setContentEn(e.target.value)}
-            placeholder='e.g. {"title": "Welcome", "subtitle": "..."}'
+            placeholder={hint?.format || '{"title": "...", "subtitle": "..."}'}
           />
         </div>
-        <div>
-          <label style={{ fontSize: 10, color: '#888', display: 'block', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-            Nội dung VI (JSON hoặc văn bản)
+        <div style={{ padding: '14px 18px' }}>
+          <label style={{ fontSize: 10, color: '#6b7280', display: 'block', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+            🇻🇳 Tiếng Việt (VI)
           </label>
           <textarea
-            style={textareaStyle}
+            style={{ ...textareaStyle, height: 110 }}
             value={content_vi}
             onChange={e => setContentVi(e.target.value)}
-            placeholder='e.g. {"title": "Chào Mừng", "subtitle": "..."}'
+            placeholder={hint?.format?.replace(/[A-Za-z]+/g, '...') || '{"title": "...", "subtitle": "..."}'}
           />
         </div>
       </div>
@@ -344,13 +442,6 @@ function ContentTab({ pageKey, contentSections }) {
   return (
     <div>
       {toast && <Toast {...toast} onClose={() => setToast(null)} />}
-      <div style={{
-        background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 4,
-        padding: '10px 16px', marginBottom: 20, fontSize: 12, color: '#92400e',
-      }}>
-        <strong>Lưu ý:</strong> Mỗi khu vực chấp nhận JSON (dữ liệu có cấu trúc) hoặc văn bản thuần.
-        Nội dung được tải qua <code>/api/admin/content/{pageKey}</code>.
-      </div>
       {loading ? (
         <div style={{ padding: 40, textAlign: 'center', color: '#888' }}>Đang tải...</div>
       ) : (

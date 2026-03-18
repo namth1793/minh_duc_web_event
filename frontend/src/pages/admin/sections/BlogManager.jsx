@@ -165,6 +165,57 @@ function FormModal({ post, onSave, onCancel, loading }) {
   );
 }
 
+function GuideBox() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, marginBottom: 20 }}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        style={{
+          width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '12px 16px', background: 'none', border: 'none', cursor: 'pointer',
+          fontFamily: 'Montserrat, sans-serif',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ background: '#16a34a', color: '#fff', fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 20 }}>● LIVE</span>
+          <span style={{ fontSize: 13, fontWeight: 600, color: '#15803d' }}>📖 Hướng dẫn — Quản lý Bài Viết</span>
+        </div>
+        <span style={{ fontSize: 11, color: '#6b7280', transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>▼</span>
+      </button>
+      {open && (
+        <div style={{ padding: '0 16px 16px', borderTop: '1px solid #bbf7d0' }}>
+          <p style={{ fontSize: 13, color: '#166534', margin: '12px 0 8px' }}>
+            Bài viết thêm/sửa/xóa sẽ <strong>cập nhật ngay trên trang /blog</strong> của website.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#15803d', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Các trường bắt buộc</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li><strong>Tiêu đề</strong>: nhập cả EN và VI</li>
+                <li><strong>Danh mục</strong>: chọn từ dropdown</li>
+                <li><strong>Ngày đăng</strong>: định dạng YYYY-MM-DD</li>
+                <li><strong>Ảnh đại diện</strong>: upload hoặc dán URL</li>
+                <li><strong>Tóm tắt</strong>: hiện ở trang danh sách blog</li>
+                <li><strong>Nội dung</strong>: hỗ trợ HTML đơn giản</li>
+              </ul>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#15803d', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Mẹo sử dụng</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li>Nội dung hỗ trợ: <code style={{ background: '#dcfce7', padding: '0 4px' }}>&lt;b&gt;</code>, <code style={{ background: '#dcfce7', padding: '0 4px' }}>&lt;p&gt;</code>, <code style={{ background: '#dcfce7', padding: '0 4px' }}>&lt;ul&gt;&lt;li&gt;</code></li>
+                <li>Sau khi lưu, vào <a href="/blog" target="_blank" style={{ color: '#16a34a' }}>/blog</a> để kiểm tra</li>
+                <li>Danh mục hiện trong bộ lọc trang blog</li>
+                <li>Xóa bài viết <strong>không thể hoàn tác</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function BlogManager() {
   const { authHeader } = useAdmin();
   const [posts, setPosts] = useState([]);
@@ -224,6 +275,7 @@ export default function BlogManager() {
   return (
     <div>
       {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      <GuideBox />
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
         <div>

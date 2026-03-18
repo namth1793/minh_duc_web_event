@@ -105,6 +105,11 @@
       "title": "Creative & Strategic Support",
       "desc": "Media strategy, social content development, short video production, and marketing campaign execution support.",
       "items": ["Media strategy", "Social content development", "Short video production", "Marketing campaign support"]
+    },
+    "sports": {
+      "title": "Sports Events & Pickleball Tournaments",
+      "desc": "Organizing sports events and Pickleball tournaments for businesses and communities — from concept, operations to media, ensuring professionalism and a complete competition experience.",
+      "items": ["Internal & open Pickleball tournaments", "Court setup & equipment", "Operations coordination & competition management", "Branding & event sponsorship", "Media coverage & event filming"]
     }
   },
   "process": {

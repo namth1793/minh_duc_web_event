@@ -192,6 +192,46 @@ function InquiriesTab() {
   );
 }
 
+function GuideBox() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: 8, marginBottom: 20 }}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Montserrat, sans-serif' }}
+      >
+        <span style={{ fontSize: 13, fontWeight: 600, color: '#1d4ed8' }}>📖 Hướng dẫn — Quản lý Liên Hệ</span>
+        <span style={{ fontSize: 11, color: '#6b7280', transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>▼</span>
+      </button>
+      {open && (
+        <div style={{ padding: '0 16px 16px', borderTop: '1px solid #bfdbfe' }}>
+          <p style={{ fontSize: 13, color: '#1e40af', margin: '12px 0 8px' }}>
+            Trang này chỉ <strong>xem dữ liệu</strong> — hiển thị tất cả form khách hàng gửi qua website.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#1d4ed8', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tab: Form Liên Hệ</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li>Nguồn: form tại trang <strong>/contact</strong></li>
+                <li>Thông tin: họ tên, email, SĐT, ngày sự kiện, tin nhắn</li>
+                <li>Nhấn "Xem thêm" để đọc nội dung đầy đủ</li>
+              </ul>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#1d4ed8', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tab: Yêu Cầu Sự Kiện</p>
+              <ul style={{ margin: 0, paddingLeft: 16, fontSize: 12, color: '#374151', lineHeight: 1.7 }}>
+                <li>Nguồn: form tại trang <strong>/lifestyle-events</strong></li>
+                <li>Thông tin: họ tên, email, SĐT, ngày sự kiện, số khách, mô tả</li>
+                <li>Liên hệ lại qua email hoặc SĐT trong danh sách</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ContactManager() {
   const [activeTab, setActiveTab] = useState('contacts');
 
@@ -219,6 +259,7 @@ export default function ContactManager() {
 
   return (
     <div style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <GuideBox />
       <div style={{ marginBottom: 20 }}>
         <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#111' }}>Liên Hệ</h3>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#888' }}>

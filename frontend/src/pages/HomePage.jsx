@@ -47,6 +47,13 @@ const services = [
     itemsKey: 'services.creative.items',
     img: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80',
   },
+  {
+    slug: 'sports',
+    titleKey: 'services.sports.title',
+    descKey: 'services.sports.desc',
+    itemsKey: 'services.sports.items',
+    img: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80',
+  },
 ];
 
 const processSteps = [
@@ -244,15 +251,15 @@ export default function HomePage() {
             </motion.p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
-                className="group bg-cream border border-cream-dark hover:border-gold transition-all duration-300 overflow-hidden"
+                className={`group bg-cream border border-cream-dark hover:border-gold transition-all duration-300 overflow-hidden md:col-span-2${idx === 3 ? ' md:col-start-2' : ''}${idx === 4 ? ' md:col-start-4' : ''}`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: (idx % 2) * 0.1 } } }}
+                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: (idx % 3) * 0.1 } } }}
               >
                 <div className="img-hover-zoom">
                   <img src={service.img} alt="" className="w-full h-48 object-cover" />
