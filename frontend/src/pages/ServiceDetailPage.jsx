@@ -38,6 +38,12 @@ const SERVICE_DEFAULTS = {
     descKey: 'services.creative.desc',
     itemsKey: 'services.creative.items',
   },
+  sports: {
+    heroImg: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&q=80',
+    titleKey: 'services.sports.title',
+    descKey: 'services.sports.desc',
+    itemsKey: 'services.sports.items',
+  },
 };
 
 export default function ServiceDetailPage() {
@@ -45,13 +51,21 @@ export default function ServiceDetailPage() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   const [content, setContent] = useState(null);
+  const [cardImg, setCardImg] = useState(null);
 
   const defaults = SERVICE_DEFAULTS[slug];
 
   useEffect(() => {
     api.get(`/api/content/service-${slug}`)
+      .then((res) => { if (Object.keys(res.data).length > 0) setContent(res.data); })
+      .catch(() => {});
+    api.get('/api/content/home')
       .then((res) => {
-        if (Object.keys(res.data).length > 0) setContent(res.data);
+        const ov = res.data?.[`service-${slug}`];
+        if (ov?.content_en) {
+          const en = JSON.parse(ov.content_en);
+          if (en.img) setCardImg(en.img);
+        }
       })
       .catch(() => {});
   }, [slug]);
@@ -81,7 +95,7 @@ export default function ServiceDetailPage() {
     return Array.isArray(val) ? val : fallback;
   };
 
-  const heroImg = get('hero', 'heroImg', defaults.heroImg);
+  const heroImg = get('hero', 'heroImg', cardImg || defaults.heroImg);
   const eyebrow = get('hero', 'eyebrow', t('services.eyebrow'));
   const heroTitle = get('hero', 'title', t(defaults.titleKey));
 

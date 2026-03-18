@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import api from '../lib/api';
@@ -72,10 +72,38 @@ const whyReasons = [
   { titleKey: 'why.r5.title', descKey: 'why.r5.desc' },
 ];
 
+function getCardData(service, overrides, t, lang) {
+  const ov = overrides[`service-${service.slug}`];
+  if (ov) {
+    try {
+      const en = JSON.parse(ov.content_en || '{}');
+      const vi = JSON.parse(ov.content_vi || '{}');
+      return {
+        title: en.title || t(service.titleKey),
+        desc: lang === 'vi' ? (vi.desc || t(service.descKey)) : (en.desc || t(service.descKey)),
+        items: lang === 'vi'
+          ? (vi.items?.length ? vi.items : t(service.itemsKey, { returnObjects: true }) || [])
+          : (en.items?.length ? en.items : t(service.itemsKey, { returnObjects: true }) || []),
+        img: en.img || null,
+      };
+    } catch { /* fallback to i18n */ }
+  }
+  return {
+    title: t(service.titleKey),
+    desc: t(service.descKey),
+    items: t(service.itemsKey, { returnObjects: true }) || [],
+  };
+}
+
 export default function HomePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', event_date: '', attendees: '' });
   const [status, setStatus] = useState('idle');
+  const [cardOverrides, setCardOverrides] = useState({});
+
+  useEffect(() => {
+    api.get('/api/content/home').then(res => setCardOverrides(res.data || {})).catch(() => {});
+  }, []);
 
   const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
@@ -252,35 +280,38 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-            {services.map((service, idx) => (
-              <motion.div
-                key={idx}
-                className={`group bg-cream border border-cream-dark hover:border-gold transition-all duration-300 overflow-hidden md:col-span-2${idx === 3 ? ' md:col-start-2' : ''}${idx === 4 ? ' md:col-start-4' : ''}`}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: (idx % 3) * 0.1 } } }}
-              >
-                <div className="img-hover-zoom">
-                  <img src={service.img} alt="" className="w-full h-48 object-cover" />
-                </div>
-                <div className="p-8">
-                  <Link to={`/services/${service.slug}`}>
-                    <h3 className="font-serif text-dark text-2xl mb-2 hover:text-gold transition-colors duration-200 cursor-pointer">{t(service.titleKey)}</h3>
-                  </Link>
-                  <div className="w-8 h-0.5 bg-gold mb-4" />
-                  <p className="font-sans text-gray-600 text-sm leading-relaxed mb-5">{t(service.descKey)}</p>
-                  <ul className="space-y-2">
-                    {(t(service.itemsKey, { returnObjects: true }) || []).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 font-sans text-sm text-gray-600">
-                        <span className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0 mt-1.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
+            {services.map((service, idx) => {
+              const card = getCardData(service, cardOverrides, t, i18n.language);
+              return (
+                <motion.div
+                  key={idx}
+                  className={`group bg-cream border border-cream-dark hover:border-gold transition-all duration-300 overflow-hidden md:col-span-2${idx === 3 ? ' md:col-start-2' : ''}${idx === 4 ? ' md:col-start-4' : ''}`}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: (idx % 3) * 0.1 } } }}
+                >
+                  <div className="img-hover-zoom">
+                    <img src={card.img || service.img} alt="" className="w-full h-48 object-cover" />
+                  </div>
+                  <div className="p-8">
+                    <Link to={`/services/${service.slug}`}>
+                      <h3 className="font-serif text-dark text-2xl mb-2 hover:text-gold transition-colors duration-200 cursor-pointer">{card.title}</h3>
+                    </Link>
+                    <div className="w-8 h-0.5 bg-gold mb-4" />
+                    <p className="font-sans text-gray-600 text-sm leading-relaxed mb-5">{card.desc}</p>
+                    <ul className="space-y-2">
+                      {card.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 font-sans text-sm text-gray-600">
+                          <span className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0 mt-1.5" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
